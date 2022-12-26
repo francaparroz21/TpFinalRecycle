@@ -13,9 +13,20 @@ public class Recipe {
     @Column(nullable = false)
     private String steps;
 
-    public Recipe(String classification, String steps) {
+    public Recipe(){}
+
+    public Recipe(Long id, String classification, String steps) {
+        this.id = id;
         this.classification = classification;
         this.steps = steps;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getClassification() {

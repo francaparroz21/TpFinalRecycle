@@ -20,4 +20,8 @@ public class RecipeService {
     public List<Recipe> getRecipes() {
         return repository.findAll();
     }
+
+    public List<Recipe> getRecipesByClassification(String classification) {
+        return repository.findByClassification(classification);
+    }
 }
