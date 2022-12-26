@@ -5,6 +5,8 @@ import com.project.recycle.model.Recipe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RecipeService {
 
@@ -13,5 +15,9 @@ public class RecipeService {
 
     public Recipe saveRecipe(Recipe recipe){
         return repository.save(recipe);
+    }
+
+    public List<Recipe> getRecipes() {
+        return repository.findAll();
     }
 }
