@@ -1,0 +1,5 @@
+com\project\recycle\Controller\SupervisorController.class
+com\project\recycle\Service\SupervisorService.class
+com\project\recycle\Repository\SupervisorRepository.class
+com\project\recycle\Model\Supervisor.class
+com\project\recycle\RecycleApplication.class
