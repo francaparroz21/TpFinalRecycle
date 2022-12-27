@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5cd98cf-2ba0-4b7f-9341-3eab4a974c5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/Controller/SupervisorControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/Repository/SupervisorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/Repository/SupervisorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Repository/SupervisorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Repository/SupervisorRepository.class" afterDir="false" />
-    </list>
+    <list default="true" id="d5cd98cf-2ba0-4b7f-9341-3eab4a974c5b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
