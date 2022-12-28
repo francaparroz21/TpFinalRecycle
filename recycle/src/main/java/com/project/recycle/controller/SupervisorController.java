@@ -3,6 +3,7 @@ package com.project.recycle.controller;
 import com.project.recycle.model.Supervisor;
 import com.project.recycle.service.SupervisorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

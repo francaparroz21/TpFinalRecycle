@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/TpFinalRecycle.iml" filepath="$PROJECT_DIR$/.idea/TpFinalRecycle.iml" />
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/recycle/recycle.iml" filepath="$PROJECT_DIR$/recycle/recycle.iml" />
-=======
->>>>>>> 122afb77d87f8219948622beffad50cdb45e5cff
-=======
-      <module fileurl="file://$PROJECT_DIR$/recycle/recycle.iml" filepath="$PROJECT_DIR$/recycle/recycle.iml" />
->>>>>>> 1c5502f20c0b32f98c80e71496b759f13e866932
     </modules>
   </component>
 </project>
