@@ -1,5 +1,6 @@
 package com.project.recycle.controller;
 
+import com.project.recycle.model.Report;
 import com.project.recycle.model.Supervisor;
 import com.project.recycle.model.Zone;
 import com.project.recycle.repository.SupervisorRepository;
@@ -29,7 +30,7 @@ class SupervisorControllerTest {
     @Test
     void add_supervisor(){
         Supervisor supervisor = new Supervisor("Valentino", "Giannico",
-                "valen@gmail.com", new Zone(), List.of("jsids", "djfidjfd"));
+                "valen@gmail.com", new Zone(), null);
         Supervisor new_supervisor = supervisorService.add_supervisor(supervisor);
         Supervisor verSiExiste = supervisorRepository.findByEmail(new_supervisor.getEmail());
         Assertions.assertNotNull(verSiExiste);
@@ -38,7 +39,7 @@ class SupervisorControllerTest {
     @Test
     void delete_supervisor(){
         Supervisor supervisor = new Supervisor("Valentino", "Giannico",
-                "valen@gmail.com", new Zone(), List.of("jsids", "djfidjfd"));
+                "valen@gmail.com", new Zone(), null);
         Supervisor new_supervisor_created = supervisorService.add_supervisor(supervisor);
         supervisorService.delete_supervisor(new_supervisor_created.getId());
         Assertions.assertNull(supervisorRepository.findByEmail(new_supervisor_created.getEmail()));
@@ -47,9 +48,9 @@ class SupervisorControllerTest {
     @Test
     void view_supervisors(){
         List<Supervisor> list_supervisors = new ArrayList<>(List.of(new Supervisor("Valentino", "Giannico",
-                "valen@gmail.com", new Zone(), List.of("jsids", "djfidjfd")),
+                "valen@gmail.com", new Zone(), null),
                 new Supervisor("Jorge", "Lopez",
-                "jorge@gmail.com", new Zone(), List.of("jfdkfd", "eiwueiw"))));
+                "jorge@gmail.com", new Zone(), null)));
 
         List<Supervisor> list_saved = supervisorRepository.saveAll(list_supervisors);
         List<Supervisor> list_repository = supervisorRepository.findAll();

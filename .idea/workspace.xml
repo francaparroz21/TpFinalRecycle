@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6b35e24-5c3e-4fb2-8436-f66788834ef8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/TpFinalRecycle.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/ReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/repository/ReportRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/ReportControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/controller/ReportController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Report.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/repository/ReportRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/service/ReportService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/recycle.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Supervisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Supervisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/SupervisorControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/SupervisorControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/RecycleApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/RecycleApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/SupervisorControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/SupervisorControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
