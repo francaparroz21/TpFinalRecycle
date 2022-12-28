@@ -21,15 +21,16 @@ public class Supervisor {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "zoneInSupervision")
-    private String zone_in_supervision;
+
+    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Zone zone_in_supervision;
 
     @Column(name = "reports")
     private List<String> reports;
 
     public Supervisor(){};
 
-    public Supervisor(String first_name, String last_name, String email, String zone_in_supervision, List<String> reports) {
+    public Supervisor(String first_name, String last_name, String email, Zone zone_in_supervision, List<String> reports) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
@@ -69,11 +70,11 @@ public class Supervisor {
         this.email = email;
     }
 
-    public String getZone_in_supervision() {
+    public Zone getZone_in_supervision() {
         return zone_in_supervision;
     }
 
-    public void setZone_in_supervision(String zone_in_supervision) {
+    public void setZone_in_supervision(Zone zone_in_supervision) {
         this.zone_in_supervision = zone_in_supervision;
     }
 

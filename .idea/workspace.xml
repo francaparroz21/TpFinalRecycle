@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e6b35e24-5c3e-4fb2-8436-f66788834ef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Supervisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Supervisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Zone.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Zone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/SupervisorControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/SupervisorControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/SupervisorControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/SupervisorControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +30,9 @@
     <setting file="file://$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/RecycleApplicationTests.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -33,8 +40,15 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectId" id="2JYITyNepRLzdTjmXEORbcw1XZ4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "C:/Users/PIL/Desktop/TpFinalReciclaje/TpFinalRecycle"
@@ -161,12 +175,20 @@
       <list>
         <item itemvalue="JUnit.SupervisorControllerTest" />
         <item itemvalue="JUnit.SupervisorControllerTest.view_supervisors" />
-        <item itemvalue="JUnit.SupervisorControllerTest.delete_supervisor" />
         <item itemvalue="JUnit.SupervisorControllerTest.add_supervisor" />
+        <item itemvalue="JUnit.SupervisorControllerTest.delete_supervisor" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6b35e24-5c3e-4fb2-8436-f66788834ef8" name="Changes" comment="" />
+      <created>1672248602076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672248602076</updated>
+    </task>
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
