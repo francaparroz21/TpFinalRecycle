@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6b35e24-5c3e-4fb2-8436-f66788834ef8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/SupervisorControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/recycle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/recycle.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/SupervisorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/SupervisorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/repository/SupervisorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/repository/SupervisorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Repository/SupervisorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Repository/SupervisorRepository.class" afterDir="false" />
-    </list>
+    <list default="true" id="e6b35e24-5c3e-4fb2-8436-f66788834ef8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,8 +178,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorControllerTest.ic" NAME="SupervisorControllerTest Coverage Results" MODIFIED="1672154130589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.project.recycle.Controller.*</FILTER>
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorControllerTest.ic" NAME="SupervisorControllerTest Coverage Results" MODIFIED="1672243024879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.project.recycle.controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TpFinalRecycle$RecycleApplicationTests.ic" NAME="RecycleApplicationTests Coverage Results" MODIFIED="1672153616281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.*</FILTER>
