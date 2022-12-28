@@ -21,6 +21,11 @@ public class Recipe {
         this.steps = steps;
     }
 
+    public Recipe(String classification, String steps) {
+        this.classification = classification;
+        this.steps = steps;
+    }
+
     public Long getId() {
         return id;
     }
