@@ -28,10 +28,11 @@ class RecipeTest {
 
     @Test
     void saveRecipe() {
-        Recipe recipe = new Recipe("vidrio","1. ASD\n2. ASD");
-        Recipe recipeSaved = controller.saveRecipe(recipe);
+        Recipe recipeSaved = controller.saveRecipe(new Recipe("vidrio","1. ASD\n2. ASD"));
         Recipe recipeFinded = repository.findById(recipeSaved.getId()).get();
+
         assertNotNull(recipeFinded);
+        assertEquals(recipeSaved.getId(),recipeFinded.getId());
     }
 
     @Test
@@ -43,18 +44,25 @@ class RecipeTest {
         List<Recipe> recipesRepository = controller.getRecipes();
 
         assertEquals(listSaved.size(),recipesRepository.size());
+
+        for (int i = 0; i<recipesRepository.size();i++){
+            assertEquals(listSaved.get(i).getId(),recipesRepository.get(i).getId());
+        }
     }
 
     @Test
     void getRecipesByClassification() {
-        List<Recipe> list_recipes = new ArrayList<>();
-        list_recipes.add(new Recipe("vidrio","1. ASD\n2. ASD"));
-        list_recipes.add(new Recipe("latas","1. 123\n2. 123"));
-        list_recipes.add(new Recipe("latas","1. 123\n2. 123"));
-        list_recipes.add(new Recipe("latas","1. 123\n2. 123"));
-        List<Recipe> listSaved = repository.saveAll(list_recipes);
-        List<Recipe> listRepository = repository.findByClassification("latas");
+        List<Recipe> listRecipes = new ArrayList<>();
+        listRecipes.add(new Recipe("glass","1. ASD\n2. ASD"));
+        listRecipes.add(new Recipe("glass","1. 123\n2. 123"));
+        listRecipes.add(new Recipe("glass","1. 123\n2. 123"));
+        listRecipes.add(new Recipe("metal","1. 123\n2. 123"));
+        List<Recipe> listSaved = repository.saveAll(listRecipes);
+        List<Recipe> listRepository = repository.findByClassification("glass");
 
         assertEquals(3,listRepository.size());
+        for (int i = 0; i<listRepository.size();i++){
+            assertEquals(listSaved.get(i).getId(),listRepository.get(i).getId());
+        }
     }
 }
