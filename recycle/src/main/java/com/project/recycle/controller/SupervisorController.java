@@ -1,14 +1,14 @@
-package com.project.recycle.Controller;
+package com.project.recycle.controller;
 
-import com.project.recycle.Model.Supervisor;
-import com.project.recycle.Service.SupervisorService;
+import com.project.recycle.model.Supervisor;
+import com.project.recycle.service.SupervisorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api/recycle/supervisor")
+@RequestMapping("/supervisor")
 public class SupervisorController {
 
     @Autowired

@@ -1,4 +1,4 @@
-package com.project.recycle.Model;
+package com.project.recycle.model;
 
 import jakarta.persistence.*;
 

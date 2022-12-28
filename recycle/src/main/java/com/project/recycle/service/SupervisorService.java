@@ -1,7 +1,7 @@
-package com.project.recycle.Service;
+package com.project.recycle.service;
 
-import com.project.recycle.Model.Supervisor;
-import com.project.recycle.Repository.SupervisorRepository;
+import com.project.recycle.model.Supervisor;
+import com.project.recycle.repository.SupervisorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
