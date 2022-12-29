@@ -5,31 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6b35e24-5c3e-4fb2-8436-f66788834ef8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/TpFinalRecycle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/ReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Report.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/repository/ReportRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/ReportControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/controller/ReportController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Report.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/repository/ReportRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/service/ReportService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/recycle.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Supervisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Supervisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/SupervisorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/SupervisorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/SupervisorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/SupervisorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/SupervisorControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/SupervisorControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/RecycleApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/RecycleApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/SupervisorControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/SupervisorControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Report.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Report.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,15 +50,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/PIL/Desktop/TpFinalReciclaje/TpFinalRecycle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PIL/Desktop/TpFinalReciclaje/TpFinalRecycle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -145,51 +130,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="recycle" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="recycle" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="recycle" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="recycle" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>

@@ -11,13 +11,13 @@ public class Report {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
+    @Column()
     private LocalDate date;
-    @Column(length = 300, nullable = false)
+    @Column(length = 300)
     private String reportMessage;
 
     private String zone;
-    @Column(length = 50, nullable = false)
+    @Column(length = 50)
     private String complainant;
 
     public Report() {

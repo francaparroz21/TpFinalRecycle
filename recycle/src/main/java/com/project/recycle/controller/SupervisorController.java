@@ -3,7 +3,6 @@ package com.project.recycle.controller;
 import com.project.recycle.model.Supervisor;
 import com.project.recycle.service.SupervisorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,7 +26,12 @@ public class SupervisorController {
     }
 
     @GetMapping
-    public List<Supervisor> view_supervisors(){
-        return supervisorService.view_supervisors();
+    public List<Supervisor> get_supervisors(){
+        return supervisorService.get_supervisors();
+    }
+
+    @GetMapping("/{id}")
+    public Supervisor get_supervisor(@PathVariable("id") Long id){
+        return supervisorService.get_supervisor(id);
     }
 }

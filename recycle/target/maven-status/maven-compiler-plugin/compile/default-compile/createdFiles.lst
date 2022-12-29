@@ -1,6 +1,6 @@
-com\project\recycle\Repository\SupervisorRepository.class
-com\project\recycle\Model\Supervisor.class
-com\project\recycle\Model\Zone.class
+com\project\recycle\model\Zone.class
+com\project\recycle\service\SupervisorService.class
 com\project\recycle\RecycleApplication.class
-com\project\recycle\Controller\SupervisorController.class
-com\project\recycle\Service\SupervisorService.class
+com\project\recycle\repository\SupervisorRepository.class
+com\project\recycle\model\Supervisor.class
+com\project\recycle\controller\SupervisorController.class

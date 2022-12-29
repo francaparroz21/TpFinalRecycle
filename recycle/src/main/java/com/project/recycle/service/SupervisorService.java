@@ -21,7 +21,11 @@ public class SupervisorService {
         supervisorRepository.deleteById(id);
     }
 
-    public List<Supervisor> view_supervisors(){
+    public List<Supervisor> get_supervisors(){
         return supervisorRepository.findAll();
     }
+    public Supervisor get_supervisor(Long id){
+        return supervisorRepository.findById(id).get();
+    }
+
 }
