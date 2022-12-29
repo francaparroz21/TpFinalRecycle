@@ -3,6 +3,8 @@ package com.project.recycle.controller;
 import com.project.recycle.model.Supervisor;
 import com.project.recycle.service.SupervisorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,23 +17,23 @@ public class SupervisorController {
     SupervisorService supervisorService;
 
     @PostMapping
-    public Supervisor add_supervisor(@RequestBody Supervisor addSupervisor){
-        return supervisorService.add_supervisor(addSupervisor);
+    public ResponseEntity<Supervisor> add_supervisor(@RequestBody Supervisor addSupervisor){
+        return new ResponseEntity<>(supervisorService.add_supervisor(addSupervisor), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
-    public String delete_supervisor(@PathVariable("id") Long id){
+    public ResponseEntity<String> delete_supervisor(@PathVariable("id") Long id){
         supervisorService.delete_supervisor(id);
-        return "Supervisor deleted successfully";
+        return ResponseEntity.ok("Supervisor deleted successfully");
     }
 
     @GetMapping
-    public List<Supervisor> get_supervisors(){
-        return supervisorService.get_supervisors();
+    public ResponseEntity<List<Supervisor>> get_supervisors(){
+        return ResponseEntity.ok(supervisorService.get_supervisors());
     }
 
     @GetMapping("/{id}")
-    public Supervisor get_supervisor(@PathVariable("id") Long id){
-        return supervisorService.get_supervisor(id);
+    public ResponseEntity<Supervisor> get_supervisor(@PathVariable("id") Long id){
+        return ResponseEntity.ok(supervisorService.get_supervisor(id));
     }
 }
