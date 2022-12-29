@@ -3,6 +3,7 @@ package com.project.recycle.controller;
 import com.project.recycle.model.Recipe;
 import com.project.recycle.repository.RecipeRepository;
 import com.project.recycle.service.RecipeService;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +18,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Transactional
 class RecipeTest {
 
     @Autowired
     RecipeController controller;
-    @Autowired
-    RecipeService service;
     @Autowired
     RecipeRepository repository;
 
