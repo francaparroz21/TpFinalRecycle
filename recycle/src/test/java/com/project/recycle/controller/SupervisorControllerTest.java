@@ -46,7 +46,7 @@ class SupervisorControllerTest {
     }
 
     @Test
-    void view_supervisors(){
+    void get_supervisors(){
         List<Supervisor> list_supervisors = new ArrayList<>(List.of(new Supervisor("Valentino", "Giannico",
                 "valen@gmail.com", new Zone(), null),
                 new Supervisor("Jorge", "Lopez",
@@ -56,6 +56,15 @@ class SupervisorControllerTest {
         List<Supervisor> list_repository = supervisorRepository.findAll();
 
         Assertions.assertEquals(list_saved.size(), list_repository.size());
+    }
+
+    @Test
+    void get_supervisor(){
+        Supervisor supervisor = new Supervisor("Valentino", "Giannico",
+                "valen@gmail.com", new Zone(), null);
+        Supervisor new_supervisor_created = supervisorService.add_supervisor(supervisor);
+
+        Assertions.assertNotNull(supervisorService.get_supervisor(new_supervisor_created.getId()));
     }
 
 }
