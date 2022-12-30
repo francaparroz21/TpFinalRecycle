@@ -1,5 +1,5 @@
 package com.project.recycle.model;
-import  jakarta.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "zone")

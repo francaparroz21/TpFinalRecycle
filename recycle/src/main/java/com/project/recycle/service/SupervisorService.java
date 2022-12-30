@@ -13,19 +13,20 @@ public class SupervisorService {
     @Autowired
     SupervisorRepository supervisorRepository;
 
-    public Supervisor add_supervisor(Supervisor supervisor){
+    public Supervisor addSupervisor(Supervisor supervisor){
         return supervisorRepository.save(supervisor);
     }
 
-    public void delete_supervisor(Long id){
+    public String deleteSupervisor(Long id){
         supervisorRepository.deleteById(id);
+        return "Supervisor deleted successfully";
     }
 
-    public List<Supervisor> get_supervisors(){
+    public List<Supervisor> getSupervisors(){
         return supervisorRepository.findAll();
     }
-    public Supervisor get_supervisor(Long id){
-        return supervisorRepository.findById(id).get();
+    public Supervisor getSupervisor(String email){
+        return supervisorRepository.findByEmail(email);
     }
 
 }

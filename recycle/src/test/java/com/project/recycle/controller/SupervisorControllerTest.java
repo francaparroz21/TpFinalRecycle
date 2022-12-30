@@ -1,70 +1,73 @@
 package com.project.recycle.controller;
 
-import com.project.recycle.model.Report;
 import com.project.recycle.model.Supervisor;
 import com.project.recycle.model.Zone;
-import com.project.recycle.repository.SupervisorRepository;
 import com.project.recycle.service.SupervisorService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import static org.mockito.Mockito.when;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@Transactional
 class SupervisorControllerTest {
-    @Autowired
-    SupervisorRepository supervisorRepository;
-    @Autowired
+
+    @Mock
     SupervisorService supervisorService;
 
+    @InjectMocks
+    SupervisorController supervisorController;
+
     @Test
-    void add_supervisor(){
+    void add_supervisor() {
         Supervisor supervisor = new Supervisor("Valentino", "Giannico",
                 "valen@gmail.com", new Zone(), null);
-        Supervisor new_supervisor = supervisorService.add_supervisor(supervisor);
-        Supervisor verSiExiste = supervisorRepository.findByEmail(new_supervisor.getEmail());
-        Assertions.assertNotNull(verSiExiste);
+        when(supervisorService.addSupervisor(supervisor)).thenReturn(supervisor);
+
+        ResponseEntity<Supervisor> addSupervisor = supervisorController.addSupervisor(supervisor);
+
+        assertEquals(supervisor, addSupervisor.getBody());
     }
 
     @Test
-    void delete_supervisor(){
-        Supervisor supervisor = new Supervisor("Valentino", "Giannico",
+    void delete_supervisor() {
+        Supervisor supervisor = new Supervisor(1L, "Valentino", "Giannico",
                 "valen@gmail.com", new Zone(), null);
-        Supervisor new_supervisor_created = supervisorService.add_supervisor(supervisor);
-        supervisorService.delete_supervisor(new_supervisor_created.getId());
-        Assertions.assertNull(supervisorRepository.findByEmail(new_supervisor_created.getEmail()));
+        when(supervisorService.getSupervisor("valen@gmail.com")).thenReturn(supervisor);
+        HttpStatusCode messageDeleted = supervisorController.deleteSupervisor(1L).getStatusCode();
+
+        assertEquals(messageDeleted, HttpStatusCode.valueOf(200));
     }
 
     @Test
     void get_supervisors(){
-        List<Supervisor> list_supervisors = new ArrayList<>(List.of(new Supervisor("Valentino", "Giannico",
-                "valen@gmail.com", new Zone(), null),
+        when(supervisorService.getSupervisors()).thenReturn(List.of(
+                new Supervisor("Valentino", "Giannico",
+                        "valen@gmail.com", new Zone(), null),
                 new Supervisor("Jorge", "Lopez",
-                "jorge@gmail.com", new Zone(), null)));
+                        "jorge@gmail.com", new Zone(), null)));
+        ResponseEntity<List<Supervisor>> supervisors = supervisorController.getSupervisors();
 
-        List<Supervisor> list_saved = supervisorRepository.saveAll(list_supervisors);
-        List<Supervisor> list_repository = supervisorRepository.findAll();
-
-        Assertions.assertEquals(list_saved.size(), list_repository.size());
+        Assertions.assertNotNull(supervisors);
+        Assertions.assertEquals(supervisors.getBody().size(), 2);
     }
 
     @Test
     void get_supervisor(){
-        Supervisor supervisor = new Supervisor("Valentino", "Giannico",
-                "valen@gmail.com", new Zone(), null);
-        Supervisor new_supervisor_created = supervisorService.add_supervisor(supervisor);
+        when(supervisorService.getSupervisor("valen@gmail.com")).thenReturn(new Supervisor(1L, "Valentino", "Giannico",
+                "valen@gmail.com", new Zone(), null));
+        ResponseEntity<Supervisor> getSupervisor = supervisorController.getSupervisor("valen@gmail.com");
 
-        Assertions.assertNotNull(supervisorService.get_supervisor(new_supervisor_created.getId()));
+        Assertions.assertNotNull(getSupervisor);
     }
-
 }

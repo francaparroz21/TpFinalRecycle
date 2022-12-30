@@ -17,23 +17,24 @@ public class SupervisorController {
     SupervisorService supervisorService;
 
     @PostMapping
-    public ResponseEntity<Supervisor> add_supervisor(@RequestBody Supervisor addSupervisor){
-        return new ResponseEntity<>(supervisorService.add_supervisor(addSupervisor), HttpStatus.CREATED);
+    public ResponseEntity<Supervisor> addSupervisor(@RequestBody Supervisor addSupervisor){
+        return new ResponseEntity<>(supervisorService.addSupervisor(addSupervisor), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete_supervisor(@PathVariable("id") Long id){
-        supervisorService.delete_supervisor(id);
-        return ResponseEntity.ok("Supervisor deleted successfully");
+    public ResponseEntity<String> deleteSupervisor(@PathVariable("id") Long id){
+        supervisorService.deleteSupervisor(id);
+        return ResponseEntity.ok(supervisorService.deleteSupervisor(id));
     }
 
     @GetMapping
-    public ResponseEntity<List<Supervisor>> get_supervisors(){
-        return ResponseEntity.ok(supervisorService.get_supervisors());
+    public ResponseEntity<List<Supervisor>> getSupervisors(){
+        return ResponseEntity.ok(supervisorService.getSupervisors());
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Supervisor> get_supervisor(@PathVariable("id") Long id){
-        return ResponseEntity.ok(supervisorService.get_supervisor(id));
+    @GetMapping("/{email}")
+    public ResponseEntity<Supervisor> getSupervisor(@PathVariable("email") String email){
+        return ResponseEntity.ok(supervisorService.getSupervisor(email));
     }
+
 }

@@ -3,4 +3,5 @@ com\project\recycle\service\SupervisorService.class
 com\project\recycle\RecycleApplication.class
 com\project\recycle\repository\SupervisorRepository.class
 com\project\recycle\model\Supervisor.class
+com\project\recycle\exceptions\ApplicationHandlerException.class
 com\project\recycle\controller\SupervisorController.class

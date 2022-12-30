@@ -3,6 +3,9 @@ package com.project.recycle.model;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.util.List;
 
@@ -15,16 +18,22 @@ public class Supervisor {
     private Long id;
 
     @Column(name = "first_name", nullable = false)
+    @Size(min = 2, max = 30, message = "The name cannot contain more than 30 letters.")
+    @NotNull(message = "First name field cannot be null")
     private String first_name;
 
     @Column(name = "last_name", nullable = false)
+    @Size(min = 2, max = 30, message = "The last name cannot contain more than 30 letters.")
+    @NotNull(message = "Last name field cannot be null")
     private String last_name;
 
+    @Email(message = "Write a real email.")
     @Column(name = "email", nullable = false)
+    @NotNull(message = "Email field cannot be null")
     private String email;
 
-
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @NotNull(message = "Zone in supervision field cannot be null")
     @Nonnull
     private Zone zone_in_supervision;
 
@@ -35,6 +44,15 @@ public class Supervisor {
     public Supervisor(){};
 
     public Supervisor(String first_name, String last_name, String email, Zone zone_in_supervision, List<Report> reports) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.zone_in_supervision = zone_in_supervision;
+        this.reports = reports;
+    }
+
+    public Supervisor(Long id, String first_name, String last_name, String email, Zone zone_in_supervision, List<Report> reports) {
+        this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;

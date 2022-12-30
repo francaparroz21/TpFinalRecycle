@@ -21,10 +21,10 @@
     <orderEntry type="library" name="Maven: org.hibernate.orm:hibernate-core:6.1.6.Final" level="project" />
     <orderEntry type="library" name="Maven: jakarta.persistence:jakarta.persistence-api:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: jakarta.transaction:jakarta.transaction-api:2.0.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jboss.logging:jboss-logging:3.5.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.5.0.Final" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.hibernate.common:hibernate-commons-annotations:6.0.2.Final" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.jboss:jandex:2.4.2.Final" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.fasterxml:classmate:1.5.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml:classmate:1.5.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: net.bytebuddy:byte-buddy:1.12.20" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.jaxb:jaxb-runtime:4.0.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.jaxb:jaxb-core:4.0.1" level="project" />
@@ -60,7 +60,6 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.4" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:6.0.3" level="project" />
     <orderEntry type="library" name="Maven: io.micrometer:micrometer-observation:1.10.2" level="project" />
@@ -102,5 +101,9 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.9.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-validation:3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.4" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:8.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:3.0.2" level="project" />
   </component>
 </module>
