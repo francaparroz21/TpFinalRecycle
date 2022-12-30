@@ -1,13 +1,15 @@
 package com.project.recycle.model;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "zone")
 public class Zone {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long zoneID;
 
     @Column(name = "longitude")
     private String longitude;
@@ -16,31 +18,30 @@ public class Zone {
     private String latitude;
 
     @Column(name = "classification")
-    private String classification;
+    private Enum<?> classification;
 
-    @Column(name = "capacity")
-    private int capacity;
+    @Column(name = "usedCapacityPercentage")
+    private int usedCapacityPercentage;
 
-    @Column(name = "supervisors")
-    private  String supervisors;
+    @Column(name = "supervisorsID")
+    private List<Long> supervisorsID;
 
     public Zone(){}
 
-    public Zone(Long id, String longitude, String latitude, String classification, Integer capacity, String supervisors){
-        this.id = id;
+    public Zone(String longitude, String latitude, Enum<?> classification, Integer usedCapacityPercentage, List<Long> supervisorsID){
         this.longitude = longitude;
         this.latitude = latitude;
         this.classification = classification;
-        this.capacity = capacity;
-        this.supervisors = supervisors;
+        this.usedCapacityPercentage = usedCapacityPercentage;
+        this.supervisorsID = supervisorsID;
     }
 
-    public Long getId() {
-        return id;
+    public Long getZoneID() {
+        return zoneID;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setZoneID(Long zoneID) {
+        this.zoneID = zoneID;
     }
 
     public String getLongitude() {
@@ -59,27 +60,27 @@ public class Zone {
         this.latitude = latitude;
     }
 
-    public String getClassification() {
+    public Enum<?> getClassification() {
         return classification;
     }
 
-    public void setClassification(String classification) {
+    public void setClassification(Enum<?> classification) {
         this.classification = classification;
     }
 
-    public int getCapacity() {
-        return capacity;
+    public int getUsedCapacityPercentage() {
+        return usedCapacityPercentage;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    public void setUsedCapacityPercentage(int usedCapacityPercentage) {
+        this.usedCapacityPercentage = usedCapacityPercentage;
     }
 
-    public String getSupervisors() {
-        return supervisors;
+    public List<Long> getSupervisorsID() {
+        return supervisorsID;
     }
 
-    public void setSupervisors(String supervisors) {
-        this.supervisors = supervisors;
+    public void setSupervisorsID(List<Long> supervisorsID) {
+        this.supervisorsID = supervisorsID;
     }
 }

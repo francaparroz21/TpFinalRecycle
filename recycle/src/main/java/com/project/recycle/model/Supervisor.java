@@ -1,6 +1,5 @@
 package com.project.recycle.model;
 
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -15,27 +14,26 @@ public class Supervisor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long supervisorID;
 
     @Column(name = "first_name", nullable = false)
     @Size(min = 2, max = 30, message = "The name cannot contain more than 30 letters.")
     @NotNull(message = "First name field cannot be null")
-    private String first_name;
+    private String firstName;
 
     @Column(name = "last_name", nullable = false)
     @Size(min = 2, max = 30, message = "The last name cannot contain more than 30 letters.")
     @NotNull(message = "Last name field cannot be null")
-    private String last_name;
+    private String lastName;
 
     @Email(message = "Write a real email.")
     @Column(name = "email", nullable = false)
     @NotNull(message = "Email field cannot be null")
     private String email;
 
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @Column(name = "zoneInSupervisionID", nullable = false)
     @NotNull(message = "Zone in supervision field cannot be null")
-    @Nonnull
-    private Zone zone_in_supervision;
+    private Long zoneInSupervisionID;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @Nullable
@@ -43,45 +41,45 @@ public class Supervisor {
 
     public Supervisor(){};
 
-    public Supervisor(String first_name, String last_name, String email, Zone zone_in_supervision, List<Report> reports) {
-        this.first_name = first_name;
-        this.last_name = last_name;
+    public Supervisor(String firstName, String lastName, String email, Long zoneInSupervisionID, List<Report> reports) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
-        this.zone_in_supervision = zone_in_supervision;
+        this.zoneInSupervisionID = zoneInSupervisionID;
         this.reports = reports;
     }
 
-    public Supervisor(Long id, String first_name, String last_name, String email, Zone zone_in_supervision, List<Report> reports) {
-        this.id = id;
-        this.first_name = first_name;
-        this.last_name = last_name;
+    public Supervisor(Long supervisorID, String firstName, String lastName, String email, Long zoneInSupervisionID, List<Report> reports) {
+        this.supervisorID = supervisorID;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
-        this.zone_in_supervision = zone_in_supervision;
+        this.zoneInSupervisionID = zoneInSupervisionID;
         this.reports = reports;
     }
 
-    public Long getId() {
-        return id;
+    public Long getSupervisorID() {
+        return supervisorID;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setSupervisorID(Long supervisorID) {
+        this.supervisorID = supervisorID;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -92,12 +90,12 @@ public class Supervisor {
         this.email = email;
     }
 
-    public Zone getZone_in_supervision() {
-        return zone_in_supervision;
+    public Long getZoneInSupervisionID() {
+        return zoneInSupervisionID;
     }
 
-    public void setZone_in_supervision(Zone zone_in_supervision) {
-        this.zone_in_supervision = zone_in_supervision;
+    public void setZoneInSupervisionID(Long zoneInSupervisionID) {
+        this.zoneInSupervisionID = zoneInSupervisionID;
     }
 
     public List<Report> getReports() {

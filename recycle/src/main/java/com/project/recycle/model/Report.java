@@ -16,7 +16,7 @@ public class Report {
     @Column(length = 300)
     private String reportMessage;
 
-    private String zone;
+    private Long zoneID;
     @Column(length = 50)
     private String complainant;
 
@@ -24,10 +24,10 @@ public class Report {
 
     }
 
-    public Report(LocalDate date, String reportMessage, String zone, String complainant) {
-        this.date = date;
+    public Report(String reportMessage, Long zoneID, String complainant) {
+        this.date = LocalDate.now();
         this.reportMessage = reportMessage;
-        this.zone = zone;
+        this.zoneID = zoneID;
         this.complainant = complainant;
     }
 
@@ -55,12 +55,12 @@ public class Report {
         this.reportMessage = reportMessage;
     }
 
-    public String getZone() {
-        return zone;
+    public Long getZoneID() {
+        return zoneID;
     }
 
-    public void setZone(String zone) {
-        this.zone = zone;
+    public void setZoneID(Long zoneID) {
+        this.zoneID = zoneID;
     }
 
     public String getComplainant() {
@@ -77,7 +77,7 @@ public class Report {
                 "id=" + id +
                 ", date=" + date +
                 ", reportMessage='" + reportMessage + '\'' +
-                ", zone=" + zone +
+                ", zone=" + zoneID +
                 ", complainant='" + complainant + '\'' +
                 '}';
     }

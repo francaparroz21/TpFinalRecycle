@@ -15,7 +15,7 @@ public interface ReportRepository extends JpaRepository<Report, Long>, PagingAnd
 
     List<Report> findByDate(LocalDate Date);
 
-    List<Report> findByZone(String zone);
+    List<Report> findByZoneID(Long zoneID);
 
     List<Report> findByComplainant(String complainant);
 
