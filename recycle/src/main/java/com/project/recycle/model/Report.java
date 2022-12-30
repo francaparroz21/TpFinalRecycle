@@ -31,6 +31,14 @@ public class Report {
         this.complainant = complainant;
     }
 
+    public Report(Long id, LocalDate date, String reportMessage, String zone, String complainant) {
+        this.id = id;
+        this.date = date;
+        this.reportMessage = reportMessage;
+        this.zone = zone;
+        this.complainant = complainant;
+    }
+
     public Long getId() {
         return id;
     }

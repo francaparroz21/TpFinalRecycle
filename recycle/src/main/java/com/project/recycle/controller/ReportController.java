@@ -21,13 +21,13 @@ public class ReportController {
     }
 
     @GetMapping
-    List<Report> getAllReports() {
-        return reportService.getAllReports();
+    ResponseEntity<List<Report>> getAllReports() {
+        return new ResponseEntity<>(reportService.getAllReports(), HttpStatus.OK);
     }
 
     @GetMapping("/pages")
-    List<Report> getByPages(@RequestParam int page, @RequestParam int size) {
-        return reportService.getReportsByPages(page, size);
+    ResponseEntity<List<Report>> getByPages(@RequestParam int page, @RequestParam int size) {
+        return new ResponseEntity<>(reportService.getReportsByPages(page, size), HttpStatus.OK);
     }
 
     @PostMapping

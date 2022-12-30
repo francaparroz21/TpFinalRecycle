@@ -39,7 +39,7 @@ public class RecycleApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		saveReportsInDB();
+//		saveReportsInDB();
 	}
 
 }

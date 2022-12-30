@@ -30,8 +30,9 @@ public class ReportService {
         return reportRepository.save(report);
     }
 
-    public void deleteReport(Long id) {
+    public String deleteReport(Long id) {
         reportRepository.deleteById(id);
+        return "Report deleted succesfully";
     }
 
 }
