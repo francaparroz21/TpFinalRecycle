@@ -16,7 +16,9 @@ public class Report {
     @Column(length = 300)
     private String reportMessage;
 
-    private Long zoneID;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "zoneID")
+    private Zone zone;
     @Column(length = 50)
     private String complainant;
 
@@ -24,10 +26,10 @@ public class Report {
 
     }
 
-    public Report(String reportMessage, Long zoneID, String complainant) {
+    public Report(String reportMessage, Zone zone, String complainant) {
         this.date = LocalDate.now();
         this.reportMessage = reportMessage;
-        this.zoneID = zoneID;
+        this.zone = zone;
         this.complainant = complainant;
     }
 
@@ -55,12 +57,12 @@ public class Report {
         this.reportMessage = reportMessage;
     }
 
-    public Long getZoneID() {
-        return zoneID;
+    public Zone getZone() {
+        return zone;
     }
 
-    public void setZoneID(Long zoneID) {
-        this.zoneID = zoneID;
+    public void setZone(Zone zone) {
+        this.zone = zone;
     }
 
     public String getComplainant() {
@@ -77,7 +79,7 @@ public class Report {
                 "id=" + id +
                 ", date=" + date +
                 ", reportMessage='" + reportMessage + '\'' +
-                ", zone=" + zoneID +
+                ", zone=" + zone +
                 ", complainant='" + complainant + '\'' +
                 '}';
     }

@@ -1,5 +1,7 @@
 package com.project.recycle.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -30,31 +32,29 @@ public class Supervisor {
     @Column(name = "email", nullable = false)
     @NotNull(message = "Email field cannot be null")
     private String email;
-
-    @Column(name = "zoneInSupervisionID", nullable = false)
-    @NotNull(message = "Zone in supervision field cannot be null")
-    private Long zoneInSupervisionID;
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "zoneID")
+    private Zone zoneInSupervision;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @Nullable
     private List<Report> reports;
 
     public Supervisor(){};
 
-    public Supervisor(String firstName, String lastName, String email, Long zoneInSupervisionID, List<Report> reports) {
+    public Supervisor(String firstName, String lastName, String email, Zone zoneInSupervision, List<Report> reports) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.zoneInSupervisionID = zoneInSupervisionID;
+        this.zoneInSupervision = zoneInSupervision;
         this.reports = reports;
     }
 
-    public Supervisor(Long supervisorID, String firstName, String lastName, String email, Long zoneInSupervisionID, List<Report> reports) {
+    public Supervisor(Long supervisorID, String firstName, String lastName, String email, Zone zoneInSupervision, List<Report> reports) {
         this.supervisorID = supervisorID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.zoneInSupervisionID = zoneInSupervisionID;
+        this.zoneInSupervision = zoneInSupervision;
         this.reports = reports;
     }
 
@@ -90,12 +90,12 @@ public class Supervisor {
         this.email = email;
     }
 
-    public Long getZoneInSupervisionID() {
-        return zoneInSupervisionID;
+    public Zone getZoneInSupervision() {
+        return zoneInSupervision;
     }
 
-    public void setZoneInSupervisionID(Long zoneInSupervisionID) {
-        this.zoneInSupervisionID = zoneInSupervisionID;
+    public void setZoneInSupervision(Zone zoneInSupervision) {
+        this.zoneInSupervision = zoneInSupervision;
     }
 
     public List<Report> getReports() {

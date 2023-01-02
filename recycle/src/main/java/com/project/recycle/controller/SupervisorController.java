@@ -1,6 +1,8 @@
 package com.project.recycle.controller;
 
 import com.project.recycle.model.Supervisor;
+import com.project.recycle.model.Zone;
+import com.project.recycle.repository.ZoneRepository;
 import com.project.recycle.service.SupervisorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,10 +18,14 @@ public class SupervisorController {
     @Autowired
     SupervisorService supervisorService;
 
+    @Autowired
+    ZoneRepository zoneRepository;
+
     @PostMapping
     public ResponseEntity<Supervisor> addSupervisor(@RequestBody Supervisor addSupervisor){
         return new ResponseEntity<>(supervisorService.addSupervisor(addSupervisor), HttpStatus.CREATED);
     }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteSupervisor(@PathVariable("id") Long id){
@@ -33,8 +39,13 @@ public class SupervisorController {
     }
 
     @GetMapping("/{email}")
-    public ResponseEntity<Supervisor> getSupervisor(@PathVariable("email") String email){
-        return ResponseEntity.ok(supervisorService.getSupervisor(email));
+    public ResponseEntity<Supervisor> getSupervisorEmail(@PathVariable("email") String email){
+        return ResponseEntity.ok(supervisorService.getSupervisorEmail(email));
+    }
+
+    @GetMapping("/id/{id}")
+    public ResponseEntity<Supervisor> getSupervisorID(@PathVariable("id") Long id){
+        return ResponseEntity.ok(supervisorService.getSupervisorID(id));
     }
 
 }

@@ -31,7 +31,7 @@ class SupervisorControllerTest {
     @Test
     void add_supervisor() {
         Supervisor supervisor = new Supervisor("Valentino", "Giannico",
-                "valen@gmail.com", 4L, null);
+                "valen@gmail.com", new Zone(), null);
         when(supervisorService.addSupervisor(supervisor)).thenReturn(supervisor);
 
         ResponseEntity<Supervisor> addSupervisor = supervisorController.addSupervisor(supervisor);
@@ -42,8 +42,8 @@ class SupervisorControllerTest {
     @Test
     void delete_supervisor() {
         Supervisor supervisor = new Supervisor(1L, "Valentino", "Giannico",
-                "valen@gmail.com", 11L, null);
-        when(supervisorService.getSupervisor("valen@gmail.com")).thenReturn(supervisor);
+                "valen@gmail.com", new Zone(), null);
+        when(supervisorService.getSupervisorEmail("valen@gmail.com")).thenReturn(supervisor);
         HttpStatusCode messageDeleted = supervisorController.deleteSupervisor(1L).getStatusCode();
 
         assertEquals(messageDeleted, HttpStatusCode.valueOf(200));
@@ -53,9 +53,9 @@ class SupervisorControllerTest {
     void get_supervisors(){
         when(supervisorService.getSupervisors()).thenReturn(List.of(
                 new Supervisor("Valentino", "Giannico",
-                        "valen@gmail.com", 19L, null),
+                        "valen@gmail.com", new Zone(), null),
                 new Supervisor("Jorge", "Lopez",
-                        "jorge@gmail.com", 8L, null)));
+                        "jorge@gmail.com", new Zone(), null)));
         ResponseEntity<List<Supervisor>> supervisors = supervisorController.getSupervisors();
 
         Assertions.assertNotNull(supervisors);
@@ -64,9 +64,9 @@ class SupervisorControllerTest {
 
     @Test
     void get_supervisor(){
-        when(supervisorService.getSupervisor("valen@gmail.com")).thenReturn(new Supervisor(1L, "Valentino", "Giannico",
-                "valen@gmail.com", 22L, null));
-        ResponseEntity<Supervisor> getSupervisor = supervisorController.getSupervisor("valen@gmail.com");
+        when(supervisorService.getSupervisorEmail("valen@gmail.com")).thenReturn(new Supervisor(1L, "Valentino", "Giannico",
+                "valen@gmail.com", new Zone(), null));
+        ResponseEntity<Supervisor> getSupervisor = supervisorController.getSupervisorEmail("valen@gmail.com");
 
         Assertions.assertNotNull(getSupervisor);
     }

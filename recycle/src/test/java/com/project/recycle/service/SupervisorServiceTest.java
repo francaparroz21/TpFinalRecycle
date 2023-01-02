@@ -25,7 +25,7 @@ class SupervisorServiceTest {
     @Test
     void add_supervisor(){
         Supervisor supervisor = new Supervisor("Valentino", "Giannico",
-                "valen@gmail.com", 6L, null);
+                "valen@gmail.com", new Zone(), null);
         when(supervisorRepository.save(supervisor)).thenReturn(supervisor);
         Supervisor new_supervisor = supervisorService.addSupervisor(supervisor);
         Assertions.assertEquals(new_supervisor.getEmail(), supervisor.getEmail());
@@ -34,7 +34,7 @@ class SupervisorServiceTest {
     @Test
     void delete_supervisor(){
         Supervisor supervisor = new Supervisor(1L, "Valentino", "Giannico",
-                "valen@gmail.com", 21L, null);
+                "valen@gmail.com", new Zone(), null);
 
         when(supervisorRepository.findById(1L)).thenReturn(Optional.of(supervisor));
         String result = supervisorService.deleteSupervisor(2L);
@@ -45,9 +45,9 @@ class SupervisorServiceTest {
     void get_supervisors(){
         when(supervisorRepository.findAll()).thenReturn(List.of(
                 new Supervisor("Valentino", "Giannico",
-                        "valen@gmail.com", 12L, null),
+                        "valen@gmail.com", new Zone(), null),
                 new Supervisor("Jorge", "Lopez",
-                "jorge@gmail.com", 1L, null)));
+                "jorge@gmail.com", new Zone(), null)));
         List<Supervisor> supervisors = supervisorService.getSupervisors();
 
         Assertions.assertNotNull(supervisors);
@@ -57,8 +57,8 @@ class SupervisorServiceTest {
     @Test
     void get_supervisor(){
         when(supervisorRepository.findByEmail("valen@gmail.com")).thenReturn(new Supervisor(1L, "Valentino", "Giannico",
-                "valen@gmail.com", 7L, null));
-        Supervisor getSupervisor = supervisorService.getSupervisor("valen@gmail.com");
+                "valen@gmail.com", new Zone(), null));
+        Supervisor getSupervisor = supervisorService.getSupervisorEmail("valen@gmail.com");
 
         Assertions.assertNotNull(getSupervisor);
     }
