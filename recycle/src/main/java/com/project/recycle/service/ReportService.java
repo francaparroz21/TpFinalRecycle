@@ -1,18 +1,30 @@
 package com.project.recycle.service;
 
 import com.project.recycle.model.Report;
+import com.project.recycle.model.Supervisor;
+import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ReportRepository;
+import com.project.recycle.repository.SupervisorRepository;
+import com.project.recycle.repository.ZoneRepository;
+import jakarta.persistence.JoinColumn;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ReportService {
     private final Log LOG = LogFactory.getLog(ReportService.class);
     private ReportRepository reportRepository;
+    @Autowired
+    SupervisorRepository supervisorRepository;
+
+    @Autowired
+    ZoneRepository  zoneRepository;
 
     public ReportService(ReportRepository reportRepository) {
         this.reportRepository = reportRepository;
@@ -27,7 +39,21 @@ public class ReportService {
     }
 
     public Report saveReport(Report report) {
-        return reportRepository.save(report);
+        Report newReport = reportRepository.save(report);
+
+        Supervisor supervisor = supervisorRepository.findByEmail(report.getComplainant());
+        List<Report> listReports = supervisor.getReports();
+        listReports.add(newReport);
+        supervisor.setReports(listReports);
+        supervisorRepository.save(supervisor);
+
+
+        Zone zone = zoneRepository.findById(report.getZone().getZoneID()).get();
+        zoneRepository.save(zone);
+
+        Report reportSaved = reportRepository.findById(newReport.getReportID()).get();
+        reportSaved.setZone(zone);
+        return reportRepository.save(reportSaved);
     }
 
     public void deleteReport(Long id) {

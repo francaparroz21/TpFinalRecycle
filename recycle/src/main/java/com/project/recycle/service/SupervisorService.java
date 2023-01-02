@@ -32,15 +32,16 @@ public class SupervisorService {
     }
 
     public Supervisor addSupervisor(Supervisor supervisor){
-        Zone zone = zoneRepository.findById(supervisor.getZoneInSupervision().getZoneID()).get();
+        Supervisor newSupervisor = supervisorRepository.save(supervisor);
+        Zone zone = zoneRepository.findById(newSupervisor.getZoneInSupervision().getZoneID()).get();
         List<Long> listSupervisors = zone.getSupervisorsID();
-        listSupervisors.add(supervisor.getSupervisorID());
+        listSupervisors.add(newSupervisor.getSupervisorID());
         zone.setSupervisorsID(listSupervisors);
         zoneRepository.save(zone);
 
-        Supervisor newSupervisor = supervisor;
-        newSupervisor.setZoneInSupervision(zone);
-        return supervisorRepository.save(newSupervisor);
+        Supervisor supervisorSaved = supervisorRepository.findById(newSupervisor.getSupervisorID()).get();
+        supervisorSaved.setZoneInSupervision(zone);
+        return supervisorRepository.save(supervisorSaved);
     }
 
     public String deleteSupervisor(Long id){

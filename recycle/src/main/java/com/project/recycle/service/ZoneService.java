@@ -23,14 +23,6 @@ public class ZoneService {
         return zoneRepository.save(zone);
     }
     public Zone getZoneID(Long id){
-        List<Supervisor> supervisor = supervisorRepository.findByZoneInSupervision(zoneRepository.findById(id).get());
-        List<Long> idsSupervisors = new ArrayList<>();
-        for(Supervisor el:supervisor){
-            idsSupervisors.add(el.getSupervisorID());
-        }
-        Zone zone = zoneRepository.findById(id).get();
-        zone.setSupervisorsID(idsSupervisors);
-        zoneRepository.save(zone);
         return zoneRepository.findById(id).get();
     }
 

@@ -10,7 +10,7 @@ public class Report {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long reportID;
     @Column()
     private LocalDate date;
     @Column(length = 300)
@@ -19,7 +19,8 @@ public class Report {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "zoneID")
     private Zone zone;
-    @Column(length = 50)
+
+    @Column(name = "complainant")
     private String complainant;
 
     public Report() {
@@ -33,12 +34,12 @@ public class Report {
         this.complainant = complainant;
     }
 
-    public Long getId() {
-        return id;
+    public Long getReportID() {
+        return reportID;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setReportID(Long reportID) {
+        this.reportID = reportID;
     }
 
     public LocalDate getDate() {
@@ -76,7 +77,7 @@ public class Report {
     @Override
     public String toString() {
         return "Report{" +
-                "id=" + id +
+                "id=" + reportID +
                 ", date=" + date +
                 ", reportMessage='" + reportMessage + '\'' +
                 ", zone=" + zone +
