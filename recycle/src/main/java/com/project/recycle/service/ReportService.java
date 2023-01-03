@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,6 +54,7 @@ public class ReportService {
 
         Report reportSaved = reportRepository.findById(newReport.getReportID()).get();
         reportSaved.setZone(zone);
+        reportSaved.setDate(LocalDate.now());
         return reportRepository.save(reportSaved);
     }
 

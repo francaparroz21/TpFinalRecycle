@@ -18,7 +18,7 @@ public class Zone {
     private String latitude;
 
     @Column(name = "classification")
-    private Enum<Classification> classification;
+    private Classification classification;
 
     @Column(name = "usedCapacityPercentage")
     private int usedCapacityPercentage;
@@ -28,7 +28,7 @@ public class Zone {
 
     public Zone(){}
 
-    public Zone(String longitude, String latitude, Enum<Classification> classification, Integer usedCapacityPercentage, List<Long> supervisorsID){
+    public Zone(String longitude, String latitude, Classification classification, Integer usedCapacityPercentage, List<Long> supervisorsID){
         this.longitude = longitude;
         this.latitude = latitude;
         this.classification = classification;
@@ -60,11 +60,11 @@ public class Zone {
         this.latitude = latitude;
     }
 
-    public Enum<Classification> getClassification() {
+    public Classification getClassification() {
         return classification;
     }
 
-    public void setClassification(Enum<Classification> classification) {
+    public void setClassification(Classification classification) {
         this.classification = classification;
     }
 

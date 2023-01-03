@@ -1,5 +1,6 @@
 package com.project.recycle.controller;
 
+import com.project.recycle.model.Classification;
 import com.project.recycle.model.Supervisor;
 import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ZoneRepository;
@@ -38,12 +39,12 @@ public class SupervisorController {
         return ResponseEntity.ok(supervisorService.getSupervisors());
     }
 
-    @GetMapping("/{email}")
+    @GetMapping("/email/{email}")
     public ResponseEntity<Supervisor> getSupervisorEmail(@PathVariable("email") String email){
         return ResponseEntity.ok(supervisorService.getSupervisorEmail(email));
     }
 
-    @GetMapping("/id/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Supervisor> getSupervisorID(@PathVariable("id") Long id){
         return ResponseEntity.ok(supervisorService.getSupervisorID(id));
     }

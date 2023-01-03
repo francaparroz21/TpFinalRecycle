@@ -35,7 +35,6 @@ class SupervisorServiceTest {
     void delete_supervisor(){
         Supervisor supervisor = new Supervisor(1L, "Valentino", "Giannico",
                 "valen@gmail.com", new Zone(), null);
-
         when(supervisorRepository.findById(1L)).thenReturn(Optional.of(supervisor));
         String result = supervisorService.deleteSupervisor(2L);
         Assertions.assertEquals(result, "Supervisor deleted successfully");
@@ -49,7 +48,6 @@ class SupervisorServiceTest {
                 new Supervisor("Jorge", "Lopez",
                 "jorge@gmail.com", new Zone(), null)));
         List<Supervisor> supervisors = supervisorService.getSupervisors();
-
         Assertions.assertNotNull(supervisors);
         Assertions.assertEquals(supervisors.size(), 2);
     }
@@ -59,7 +57,6 @@ class SupervisorServiceTest {
         when(supervisorRepository.findByEmail("valen@gmail.com")).thenReturn(new Supervisor(1L, "Valentino", "Giannico",
                 "valen@gmail.com", new Zone(), null));
         Supervisor getSupervisor = supervisorService.getSupervisorEmail("valen@gmail.com");
-
         Assertions.assertNotNull(getSupervisor);
     }
 
