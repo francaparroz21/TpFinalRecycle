@@ -4,16 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6b35e24-5c3e-4fb2-8436-f66788834ef8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/repository/hola" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_3_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_8_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_3_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/recycle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/recycle.iml" afterDir="false" />
-    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,25 +12,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
-        <option value="Interface" />
-        <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="supervisor" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/RecycleApplicationTests.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -51,107 +26,38 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2JYITyNepRLzdTjmXEORbcw1XZ4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PIL/Desktop/TpFinalReciclaje/TpFinalRecycle&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
-  }
-}</component>
+
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.project.recycle.service" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.project.recycle.controller" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.SupervisorControllerTest">
-    <configuration name="SupervisorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="recycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.recycle.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.SupervisorControllerTest" />
+
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupervisorControllerTest.get_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="recycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.recycle.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.SupervisorControllerTest" />
-      <option name="METHOD_NAME" value="get_supervisor" />
+
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupervisorControllerTest.get_supervisors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="recycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.recycle.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.SupervisorControllerTest" />
-      <option name="METHOD_NAME" value="get_supervisors" />
-      <option name="TEST_OBJECT" value="method" />
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupervisorServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="recycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.recycle.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.SupervisorServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SupervisorServiceTest.get_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="recycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.recycle.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.SupervisorServiceTest" />
-      <option name="METHOD_NAME" value="get_supervisor" />
+
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,21 +66,14 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SupervisorControllerTest" />
-        <item itemvalue="JUnit.SupervisorServiceTest" />
-        <item itemvalue="JUnit.SupervisorServiceTest.get_supervisor" />
-        <item itemvalue="JUnit.SupervisorControllerTest.get_supervisors" />
-        <item itemvalue="JUnit.SupervisorControllerTest.get_supervisor" />
+
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e6b35e24-5c3e-4fb2-8436-f66788834ef8" name="Changes" comment="" />
-      <created>1672248602076</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1672248602076</updated>
+
     </task>
     <servers />
   </component>
@@ -186,42 +85,12 @@
             <State />
           </value>
         </entry>
-        <entry key="c05e516c-bae7-417a-9228-12820754907c">
-          <value>
-            <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="roots">
-                    <value>
-                      <list>
-                        <option value="$PROJECT_DIR$" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="c05e516c-bae7-417a-9228-12820754907c" value="TOOL_WINDOW" />
+
       </map>
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorControllerTest.ic" NAME="SupervisorControllerTest Coverage Results" MODIFIED="1672334903630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.project.recycle.controller.*</FILTER>
+
     </SUITE>
     <SUITE FILE_PATH="coverage/TpFinalRecycle$RecycleApplicationTests.ic" NAME="RecycleApplicationTests Coverage Results" MODIFIED="1672153616281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.*</FILTER>
