@@ -1,9 +1,12 @@
 package com.project.recycle.service;
 
 import com.project.recycle.model.Report;
+import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ReportRepository;
+import com.project.recycle.repository.ZoneRepository;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +16,12 @@ import java.util.List;
 public class ReportService {
     private final Log LOG = LogFactory.getLog(ReportService.class);
     private ReportRepository reportRepository;
+    private ZoneRepository zoneRepository;
 
-    public ReportService(ReportRepository reportRepository) {
+    @Autowired
+    public ReportService(ReportRepository reportRepository, ZoneRepository zoneRepository) {
         this.reportRepository = reportRepository;
+        this.zoneRepository = zoneRepository;
     }
 
     public List<Report> getAllReports() {

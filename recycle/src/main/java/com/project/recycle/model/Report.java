@@ -10,7 +10,7 @@ public class Report {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long reportId;
     @Column(nullable = false)
     private LocalDate date;
     @Column(length = 300, nullable = false)
@@ -35,7 +35,7 @@ public class Report {
     }
 
     public Report(Long id, LocalDate date, String reportMessage, Zone zone, String complainant) {
-        this.id = id;
+        this.reportId = id;
         this.date = date;
         this.reportMessage = reportMessage;
         this.zone = zone;
@@ -43,11 +43,11 @@ public class Report {
     }
 
     public Long getId() {
-        return id;
+        return reportId;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.reportId = id;
     }
 
     public LocalDate getDate() {
@@ -85,7 +85,7 @@ public class Report {
     @Override
     public String toString() {
         return "Report{" +
-                "id=" + id +
+                "id=" + reportId +
                 ", date=" + date +
                 ", reportMessage='" + reportMessage + '\'' +
                 ", zone=" + zone +

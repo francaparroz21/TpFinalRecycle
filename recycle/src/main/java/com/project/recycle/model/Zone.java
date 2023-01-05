@@ -6,7 +6,6 @@ import java.util.List;
 @Entity
 @Table(name = "zone")
 public class Zone {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long zoneId;
@@ -72,6 +71,18 @@ public class Zone {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public List<Report> getReports() {
+        return reports;
+    }
+
+    public void setReports(List<Report> reports) {
+        this.reports = reports;
+    }
+
+    public void addReports(Report report) {
+        this.reports.add(report);
     }
 
     public String getSupervisors() {
