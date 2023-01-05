@@ -60,4 +60,13 @@ class ZoneServiceTest {
         Assertions.assertEquals(zones.size(), 2);
     }
 
+    @Test
+    void getZoneID() {
+        Zone new_zone = new Zone(1L,"7373843", "4837483", Classification.GLASS, 56, List.of(2L,7L));
+        when(zoneRepository.findById(1L)).thenReturn(Optional.of(new_zone));
+        Zone zone = zoneService.getZoneID(1L);
+
+        assertNotNull(zone);
+        assertEquals(new_zone, zone);
+    }
 }

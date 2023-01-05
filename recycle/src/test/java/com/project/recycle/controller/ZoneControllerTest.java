@@ -13,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -55,5 +56,15 @@ class ZoneControllerTest {
 
         Assertions.assertNotNull(zones);
         Assertions.assertEquals(zones.size(), 2);
+    }
+
+    @Test
+    void getZoneID() {
+        Zone new_zone = new Zone(1L,"7373843", "4837483", Classification.GLASS, 56, List.of(2L,7L));
+        when(zoneService.getZoneID(1L)).thenReturn(new_zone);
+        Zone zone = zoneController.getZoneID(1L);
+
+        assertNotNull(zone);
+        assertEquals(new_zone, zone);
     }
 }
