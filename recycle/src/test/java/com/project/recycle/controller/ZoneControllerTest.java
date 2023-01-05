@@ -3,6 +3,7 @@ package com.project.recycle.controller;
 import com.project.recycle.model.Classification;
 import com.project.recycle.model.Zone;
 import com.project.recycle.service.ZoneService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -43,5 +44,16 @@ class ZoneControllerTest {
         String new_zone = zoneService.deleteZone(zone.getZoneID());
 
         assertEquals(new_zone, "zone removed");
+    }
+
+    @Test
+    void getViewAll() {
+        when(zoneService.getAllZones()).thenReturn(
+                List.of(new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(2L,7L)),
+                        new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(1L,3L))));
+        List<Zone> zones = zoneController.getAllZones();
+
+        Assertions.assertNotNull(zones);
+        Assertions.assertEquals(zones.size(), 2);
     }
 }
