@@ -10,7 +10,7 @@ public class Zone {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long zoneID;
 
     @Column(name = "longitude")
     private String longitude;
@@ -38,12 +38,12 @@ public class Zone {
 
     public Zone(){}
     
-    public Long getId() {
-        return id;
+    public Long getZoneID() {
+        return zoneID;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setZoneID(Long zoneID) {
+        this.zoneID = zoneID;
     }
 
     public String getLongitude() {

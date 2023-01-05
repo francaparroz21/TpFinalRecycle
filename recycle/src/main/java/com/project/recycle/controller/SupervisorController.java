@@ -1,6 +1,7 @@
 package com.project.recycle.controller;
 
 import com.project.recycle.model.Supervisor;
+import com.project.recycle.repository.ZoneRepository;
 import com.project.recycle.service.SupervisorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

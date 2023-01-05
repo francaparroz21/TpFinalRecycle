@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="recycle" target="17" />
+      <module name="recycle" target="9" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

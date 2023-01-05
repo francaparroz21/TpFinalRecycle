@@ -35,13 +35,13 @@ public class Supervisor {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "zoneID")
     private Zone zoneInSupervision;
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @Nullable
-    private List<Report> reports;
+    //@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    //@Nullable
+    private List<String> reports;
 
     public Supervisor(){};
 
-    public Supervisor(String firstName, String lastName, String email, Zone zoneInSupervision, List<Report> reports) {
+    public Supervisor(String firstName, String lastName, String email, Zone zoneInSupervision, List<String> reports) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -49,7 +49,7 @@ public class Supervisor {
         this.reports = reports;
     }
 
-    public Supervisor(Long supervisorID, String firstName, String lastName, String email, Zone zoneInSupervision, List<Report> reports) {
+    public Supervisor(Long supervisorID, String firstName, String lastName, String email, Zone zoneInSupervision, List<String> reports) {
         this.supervisorID = supervisorID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -98,11 +98,11 @@ public class Supervisor {
         this.zoneInSupervision = zoneInSupervision;
     }
 
-    public List<Report> getReports() {
+    public List<String> getReports() {
         return reports;
     }
 
-    public void setReports(List<Report> reports) {
+    public void setReports(List<String> reports) {
         this.reports = reports;
     }
 }
