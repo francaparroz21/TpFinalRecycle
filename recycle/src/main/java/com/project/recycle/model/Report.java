@@ -10,13 +10,14 @@ public class Report {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long reportId;
     @Column(nullable = false)
     private LocalDate date;
     @Column(length = 300, nullable = false)
     private String reportMessage;
-
-    private String zone;
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "zoneId", insertable = false, updatable = false)
+    private Zone zone;
     @Column(length = 50, nullable = false)
     private String complainant;
 
@@ -24,15 +25,15 @@ public class Report {
 
     }
 
-    public Report(LocalDate date, String reportMessage, String zone, String complainant) {
+    public Report(LocalDate date, String reportMessage, Zone zone, String complainant) {
         this.date = date;
         this.reportMessage = reportMessage;
         this.zone = zone;
         this.complainant = complainant;
     }
 
-    public Report(Long id, LocalDate date, String reportMessage, String zone, String complainant) {
-        this.id = id;
+    public Report(Long id, LocalDate date, String reportMessage, Zone zone, String complainant) {
+        this.reportId = id;
         this.date = date;
         this.reportMessage = reportMessage;
         this.zone = zone;
@@ -40,11 +41,11 @@ public class Report {
     }
 
     public Long getId() {
-        return id;
+        return reportId;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.reportId = id;
     }
 
     public LocalDate getDate() {
@@ -63,11 +64,11 @@ public class Report {
         this.reportMessage = reportMessage;
     }
 
-    public String getZone() {
+    public Zone getZone() {
         return zone;
     }
 
-    public void setZone(String zone) {
+    public void setZone(Zone zone) {
         this.zone = zone;
     }
 
@@ -82,7 +83,7 @@ public class Report {
     @Override
     public String toString() {
         return "Report{" +
-                "id=" + id +
+                "id=" + reportId +
                 ", date=" + date +
                 ", reportMessage='" + reportMessage + '\'' +
                 ", zone=" + zone +
