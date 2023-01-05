@@ -14,7 +14,7 @@ public class Zone {
 
     private String latitude;
 
-    private String classification;
+    private Classification classification;
 
     private int usedCapacityPercentage;
 
@@ -22,7 +22,7 @@ public class Zone {
     
     public Zone(){}
 
-    public Zone(String longitude, String latitude, String classification, Integer capacity, String supervisors){
+    public Zone(String longitude, String latitude, Classification classification, Integer capacity, List<Long> supervisors){
         this.longitude = longitude;
         this.latitude = latitude;
         this.classification = classification;
@@ -54,39 +54,27 @@ public class Zone {
         this.latitude = latitude;
     }
 
-    public String getClassification() {
+    public Classification getClassification() {
         return classification;
     }
 
-    public void setClassification(String classification) {
+    public void setClassification(Classification classification) {
         this.classification = classification;
     }
 
-    public int getCapacity() {
-        return capacity;
+    public int getUsedCapacityPercentage() {
+        return usedCapacityPercentage;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    public void setUsedCapacityPercentage(int usedCapacityPercentage) {
+        this.v = usedCapacityPercentage;
     }
 
-    public List<Report> getReports() {
-        return reports;
+    public List<Long> getSupervisorsID() {
+        return supervisorsID;
     }
 
-    public void setReports(List<Report> reports) {
-        this.reports = reports;
-    }
-
-    public void addReports(Report report) {
-        this.reports.add(report);
-    }
-
-    public String getSupervisors() {
-        return supervisors;
-    }
-
-    public void setSupervisors(String supervisors) {
-        this.supervisors = supervisors;
+    public void setSupervisorsID(String supervisorsID) {
+        this.supervisorsID = supervisorsID;
     }
 }
