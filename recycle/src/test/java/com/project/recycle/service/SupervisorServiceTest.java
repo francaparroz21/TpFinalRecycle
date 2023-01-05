@@ -50,7 +50,7 @@ class SupervisorServiceTest {
                 new Supervisor("Valentino", "Giannico",
                         "valen@gmail.com", new Zone(), null),
                 new Supervisor("Jorge", "Lopez",
-                "jorge@gmail.com", new Zone(), null)));
+                        "jorge@gmail.com", new Zone(), null)));
         List<Supervisor> supervisors = supervisorService.getSupervisors();
         Assertions.assertNotNull(supervisors);
         Assertions.assertEquals(supervisors.size(), 2);

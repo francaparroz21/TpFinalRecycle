@@ -28,4 +28,9 @@ public class ZoneController {
     public List<Zone> getAllZones(){
         return zoneService.getAllZones();
     }
+
+    @GetMapping("/{id}")
+    public Zone getZoneID(@PathVariable("id") Long id){
+        return  zoneService.getZoneID(id);
+    }
 }
