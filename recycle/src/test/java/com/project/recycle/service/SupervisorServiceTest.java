@@ -1,6 +1,7 @@
 package com.project.recycle.service;
 
 import com.project.recycle.model.Supervisor;
+import com.project.recycle.model.Zone;
 import com.project.recycle.repository.SupervisorRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
