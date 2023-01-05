@@ -1,6 +1,7 @@
 package com.project.recycle.model;
 import  jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
+
+import java.util.List;
 
 @Entity
 @Table(name = "zone")
@@ -8,27 +9,24 @@ public class Zone {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long zoneId;
 
-    @Column(name = "longitude")
     private String longitude;
 
-    @Column(name = "latitude")
     private String latitude;
 
-    @Column(name = "classification")
     private String classification;
 
-    @Column(name = "capacity")
     private int capacity;
 
-    @Column(name = "supervisors")
     private  String supervisors;
+
+    @OneToMany(mappedBy = "zone")
+    private List<Report> reports;
 
     public Zone(){}
 
-    public Zone(Long id, String longitude, String latitude, String classification, Integer capacity, String supervisors){
-        this.id = id;
+    public Zone(String longitude, String latitude, String classification, Integer capacity, String supervisors){
         this.longitude = longitude;
         this.latitude = latitude;
         this.classification = classification;
@@ -36,12 +34,12 @@ public class Zone {
         this.supervisors = supervisors;
     }
 
-    public Long getId() {
-        return id;
+    public Long getZoneId() {
+        return zoneId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long zoneId) {
+        this.zoneId = zoneId;
     }
 
     public String getLongitude() {

@@ -17,7 +17,6 @@ public class ReportController {
     @Autowired
     public ReportController(ReportService reportService) {
         this.reportService = reportService;
-
     }
 
     @GetMapping

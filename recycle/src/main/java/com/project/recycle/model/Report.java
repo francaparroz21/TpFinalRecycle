@@ -16,7 +16,10 @@ public class Report {
     @Column(length = 300, nullable = false)
     private String reportMessage;
 
-    private String zone;
+    @ManyToOne
+    @JoinColumn(name = "zoneId", insertable = false, updatable = false)
+    private Zone zone;
+
     @Column(length = 50, nullable = false)
     private String complainant;
 
@@ -24,14 +27,14 @@ public class Report {
 
     }
 
-    public Report(LocalDate date, String reportMessage, String zone, String complainant) {
+    public Report(LocalDate date, String reportMessage, Zone zone, String complainant) {
         this.date = date;
         this.reportMessage = reportMessage;
         this.zone = zone;
         this.complainant = complainant;
     }
 
-    public Report(Long id, LocalDate date, String reportMessage, String zone, String complainant) {
+    public Report(Long id, LocalDate date, String reportMessage, Zone zone, String complainant) {
         this.id = id;
         this.date = date;
         this.reportMessage = reportMessage;
@@ -63,12 +66,8 @@ public class Report {
         this.reportMessage = reportMessage;
     }
 
-    public String getZone() {
+    public Zone getZone() {
         return zone;
-    }
-
-    public void setZone(String zone) {
-        this.zone = zone;
     }
 
     public String getComplainant() {
@@ -77,6 +76,10 @@ public class Report {
 
     public void setComplainant(String complainant) {
         this.complainant = complainant;
+    }
+
+    public void setZone(Zone zone) {
+        this.zone = zone;
     }
 
     @Override

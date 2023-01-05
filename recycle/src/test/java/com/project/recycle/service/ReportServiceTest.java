@@ -1,6 +1,7 @@
 package com.project.recycle.service;
 
 import com.project.recycle.model.Report;
+import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ReportRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -29,9 +30,13 @@ class ReportServiceTest {
 
     @Test
     void getAllReports() {
-        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", "Zona 2", "Lucas Suarez");
-        Report report2 = new Report(LocalDate.of(2021, 9, 23), "Denuncia por hurto", "Zona 3", "Mirta Braun");
-        Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", "Zona 1", "Marcos Acuña");
+        Report report1 = new Report();
+        report1.setDate(LocalDate.of(2021, 9, 23));
+        report1.setReportMessage("Denuncia por vandalismo de 3 chicos.");
+        report1.setZone(new Zone());
+        report1.setComplainant("Cristian Romero");
+        Report report2 = new Report(LocalDate.of(2021, 9, 23), "Denuncia por hurto", new Zone(), "Mirta Braun");
+        Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", new Zone(), "Marcos Acuña");
         when(reportRepository.findAll()).thenReturn(Arrays.asList(report1, report2, report3));
 
         List<Report> getReports = reportService.getAllReports();
@@ -47,7 +52,7 @@ class ReportServiceTest {
 
     @Test
     void saveReport() {
-        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", "Zona 2", "Lucas Suarez");
+        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", new Zone(), "Lucas Suarez");
         when(reportRepository.save(report1)).thenReturn(report1);
 
         Report reportSaved = reportService.saveReport(report1);
