@@ -19,6 +19,6 @@ public class ZoneController {
 
     @DeleteMapping("/{id}")
     public String deleteZone(@PathVariable("id") Long id){
-        zoneService.deleteZone(id);
+        return zoneService.deleteZone(id);
     }
 }

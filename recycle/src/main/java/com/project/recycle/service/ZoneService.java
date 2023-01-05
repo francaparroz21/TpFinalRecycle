@@ -17,6 +17,6 @@ public class ZoneService {
 
     public String deleteZone(Long id){
         zoneRepository.deleteById(id);
-        return "zone deleted";
+        return "zone removed";
     }
 }

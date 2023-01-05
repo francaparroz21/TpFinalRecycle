@@ -9,10 +9,13 @@ import org.mockito.InjectMocks;
 import static org.mockito.Mockito.when;
 
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.swing.text.html.parser.Entity;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -35,4 +38,14 @@ class ZoneServiceTest {
 
         assertEquals(new_zone, zone);
     }
+
+    @Test
+    void deleteZone(){
+        Zone expected = new Zone(1L,"23123124", "42434324", Classification.GLASS, 89, List.of(1L,3L));
+        when(zoneRepository.findById(1L)).thenReturn(Optional.of(expected)).thenReturn(null);
+        String zone_deleted = zoneService.deleteZone(1L);
+        Mockito.verify(zoneRepository, Mockito.times(1)).deleteById(1L);
+        assertEquals(zone_deleted, "zone removed");
+    }
+
 }

@@ -36,6 +36,15 @@ public class Zone {
         this.supervisorsID = supervisorsID;
     }
 
+    public Zone(Long zoneID, String longitude, String latitude, Classification classification, int usedCapacityPercentage, List<Long> supervisorsID) {
+        this.zoneID = zoneID;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.classification = classification;
+        this.usedCapacityPercentage = usedCapacityPercentage;
+        this.supervisorsID = supervisorsID;
+    }
+
     public Zone(){}
     
     public Long getZoneID() {

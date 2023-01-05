@@ -30,6 +30,7 @@ public class SupervisorService {
     }
 
     public Supervisor addSupervisor(Supervisor supervisor){
+
         Supervisor newSupervisor = supervisorRepository.save(supervisor);
         Zone zone = zoneRepository.findById(newSupervisor.getZoneInSupervision().getZoneID()).get();
         List<Long> listSupervisors = zone.getSupervisorsID();
