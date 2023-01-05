@@ -5,6 +5,7 @@ import com.project.recycle.repository.RecipeRepository;
 import com.project.recycle.service.RecipeService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class RecipeControllerTest {
 
-    @Mock
+    @InjectMocks
     RecipeController controller;
     @Mock
     RecipeService service;
@@ -67,6 +68,14 @@ class RecipeControllerTest {
         List<Recipe> listSavedReturn = listSaved.stream().filter(recipe -> recipe.getClassification().equals("latas")).toList();
 
         when(service.getRecipesByClassification("latas")).thenReturn(listSavedReturn);
+    }
+
+    @Test
+    void deleteRecipeTest(){
+        Recipe recipe1 = new Recipe("metal","1. ASD\n2. ASD");
+        service.saveRecipe(recipe1);
+        when(service.deleteRecipe(recipe1.getId())).thenReturn(true);
+
     }
 
 }
