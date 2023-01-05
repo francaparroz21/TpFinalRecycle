@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6b35e24-5c3e-4fb2-8436-f66788834ef8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/ZoneControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Model/Classification.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Model/Classification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Model/Supervisor.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Model/Supervisor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Model/Zone.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Model/Zone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/RecycleApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/RecycleApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Service/SupervisorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Service/SupervisorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Service/ZoneService.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Service/ZoneService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/ZoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/ZoneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ZoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ZoneService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/SupervisorControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/SupervisorControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +70,7 @@
       <recent name="com.project.recycle.service" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.project.recycle.service" />
       <recent name="com.project.recycle.controller" />
     </key>
   </component>

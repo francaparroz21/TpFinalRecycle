@@ -14,4 +14,8 @@ public class ZoneService {
     public Zone addZone(Zone zone){
         return zoneRepository.save(zone);
     }
+
+    public void deleteZone(Long id){
+        zoneRepository.deleteById(id);
+    }
 }
