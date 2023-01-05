@@ -8,8 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/ZoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/ZoneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ZoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ZoneService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/ZoneControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/ZoneControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +69,8 @@
       <recent name="com.project.recycle.service" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.project.recycle.service" />
       <recent name="com.project.recycle.controller" />
+      <recent name="com.project.recycle.service" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ZoneServiceTest.addZone">

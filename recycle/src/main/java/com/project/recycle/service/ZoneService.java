@@ -15,7 +15,8 @@ public class ZoneService {
         return zoneRepository.save(zone);
     }
 
-    public void deleteZone(Long id){
+    public String deleteZone(Long id){
         zoneRepository.deleteById(id);
+        return "zone deleted";
     }
 }

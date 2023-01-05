@@ -34,4 +34,12 @@ class ZoneControllerTest {
 
         assertEquals(new_zone, zone);
     }
+
+    @Test
+    void deleteZone() {
+        Zone zone = new Zone("23123124", "42434324", Classification.GLASS, 89, List.of(1L,3L));
+        when(zoneService.deleteZone(zone.getZoneID())).thenReturn("zone deleted");
+
+        Zone new_zone = zoneService.
+    }
 }
