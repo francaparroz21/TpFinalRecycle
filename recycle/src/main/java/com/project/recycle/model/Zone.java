@@ -16,13 +16,10 @@ public class Zone {
 
     private String classification;
 
-    private int capacity;
+    private int usedCapacityPercentage;
 
-    private  String supervisors;
-
-    @OneToMany(mappedBy = "zone")
-    private List<Report> reports;
-
+    private List<Long> supervisorsID;
+    
     public Zone(){}
 
     public Zone(String longitude, String latitude, String classification, Integer capacity, String supervisors){
