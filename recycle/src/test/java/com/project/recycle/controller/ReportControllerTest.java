@@ -1,7 +1,6 @@
 package com.project.recycle.controller;
 
 import com.project.recycle.model.Report;
-import com.project.recycle.model.Zone;
 import com.project.recycle.service.ReportService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
