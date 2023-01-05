@@ -57,10 +57,13 @@ class ReportServiceTest {
         Report reportSaved = reportService.saveReport(report1);
 
         assertEquals(report1.getId(), reportSaved.getId());
+        assertEquals(report1.getComplainant(), reportSaved.getComplainant());
+        assertEquals(report1.getReportMessage(), reportSaved.getReportMessage());
     }
 
     @Test
     void deleteReport() {
+        Report report1 = new Report(1L, LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", new Zone(), "Lucas Suarez");
         String deleted = reportService.deleteReport(1l);
         assertEquals("Report deleted succesfully", deleted);
     }

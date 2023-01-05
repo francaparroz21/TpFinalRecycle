@@ -34,7 +34,7 @@ public class RecycleApplication implements CommandLineRunner {
 	public void saveReportsInDB() {
 		Zone zone1 = new Zone("123123", "4124123", "glass", 50000, "Lucas");
 		zoneRepository.save(zone1);
-		Zone foundZone = zoneRepository.findById(1l).get();
+		Zone foundZone = zoneRepository.findById(1L).get();
 		Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", foundZone, "Lucas Suarez");
 		Report report2 = new Report(LocalDate.of(2021, 9, 23), "Denuncia por hurto", foundZone, "Mirta Braun");
 		Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", foundZone, "Marcos Acuña");
@@ -45,7 +45,7 @@ public class RecycleApplication implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... args) {
 		saveReportsInDB();
 	}
 

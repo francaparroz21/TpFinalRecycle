@@ -36,7 +36,8 @@ class ReportControllerTest {
 
         ResponseEntity<List<Report>> getReports = reportController.getAllReports();
         assertNotNull(getReports);
-        assertEquals(getReports.getBody().size(), 3);
+        assertEquals(3, getReports.getBody().size());
+        assertEquals(LocalDate.of(2021, 1, 18), getReports.getBody().get(0).getDate());
     }
 
     @Test
@@ -59,12 +60,14 @@ class ReportControllerTest {
 
         assertEquals(HttpStatusCode.valueOf(201), reportStatus);
         assertEquals(report1, reportSaved.getBody());
+        assertEquals(report1.getZone(), reportSaved.getBody().getZone());
 
     }
 
     @Test
     void deleteReport() {
-        Report report1 = new Report(1l, LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", new Zone(), "Lucas Suarez");
+        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", new Zone(), "Lucas Suarez");
+        report1.setId(1L);
         HttpStatusCode reportStatus = reportController.deleteReport(1l).getStatusCode();
         assertEquals(HttpStatusCode.valueOf(204), reportStatus);
     }
