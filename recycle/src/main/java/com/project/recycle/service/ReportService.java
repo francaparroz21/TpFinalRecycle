@@ -39,21 +39,9 @@ public class ReportService {
     }
 
     public Report saveReport(Report report) {
-        Report newReport = reportRepository.save(report);
-
-        Supervisor supervisor = supervisorRepository.findByEmail(report.getComplainant());
-        List<Report> listReports = supervisor.getReports();
-        listReports.add(newReport);
-        supervisor.setReports(listReports);
-        supervisorRepository.save(supervisor);
-
-
-        Zone zone = zoneRepository.findById(report.getZone().getZoneID()).get();
-        zoneRepository.save(zone);
-
-        Report reportSaved = reportRepository.findById(newReport.getReportID()).get();
-        reportSaved.setZone(zone);
-        return reportRepository.save(reportSaved);
+        Report new_report = report;
+        new_report.setZone(zoneRepository.findById(report.getZone().getZoneID()).get());
+        return reportRepository.save(new_report);
     }
 
     public void deleteReport(Long id) {

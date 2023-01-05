@@ -6,13 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e6b35e24-5c3e-4fb2-8436-f66788834ef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Model/Zone.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/Model/Zone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Zone.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Zone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/service/ReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/service/ReportService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/RecycleApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +24,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -74,9 +76,10 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.project.recycle.controller" />
+      <recent name="com.project.recycle.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SupervisorControllerTest">
+  <component name="RunManager" selected="JUnit.ZoneServiceTest.addZone">
     <configuration name="SupervisorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
@@ -108,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupervisorControllerTest.get_supervisors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SupervisorControllerTest.add_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
         <pattern>
@@ -118,28 +121,29 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
       <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.SupervisorControllerTest" />
-      <option name="METHOD_NAME" value="get_supervisors" />
+      <option name="METHOD_NAME" value="add_supervisor" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupervisorServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ZoneControllerTest.addZone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.project.recycle.service.*" />
+          <option name="PATTERN" value="com.project.recycle.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.SupervisorServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.ZoneControllerTest" />
+      <option name="METHOD_NAME" value="addZone" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupervisorServiceTest.get_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ZoneServiceTest.addZone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
         <pattern>
@@ -148,8 +152,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.recycle.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.SupervisorServiceTest" />
-      <option name="METHOD_NAME" value="get_supervisor" />
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.ZoneServiceTest" />
+      <option name="METHOD_NAME" value="addZone" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ZoneServiceTest.addZone" />
+        <item itemvalue="JUnit.ZoneControllerTest.addZone" />
         <item itemvalue="JUnit.SupervisorControllerTest" />
+        <item itemvalue="JUnit.SupervisorControllerTest.add_supervisor" />
         <item itemvalue="JUnit.SupervisorControllerTest.addSupervisor" />
-        <item itemvalue="JUnit.SupervisorServiceTest" />
-        <item itemvalue="JUnit.SupervisorServiceTest.get_supervisor" />
-        <item itemvalue="JUnit.SupervisorControllerTest.get_supervisors" />
       </list>
     </recent_temporary>
   </component>
