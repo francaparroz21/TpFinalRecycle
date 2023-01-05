@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -63,11 +64,18 @@ class SupervisorControllerTest {
     }
 
     @Test
-    void get_supervisor(){
+    void getSupervisorEmail() {
         when(supervisorService.getSupervisorEmail("valen@gmail.com")).thenReturn(new Supervisor(1L, "Valentino", "Giannico",
                 "valen@gmail.com", new Zone(), null));
-        ResponseEntity<Supervisor> getSupervisor = supervisorController.getSupervisorEmail("valen@gmail.com");
+        Supervisor getSupervisor = supervisorService.getSupervisorEmail("valen@gmail.com");
+        Assertions.assertNotNull(getSupervisor);
+    }
 
+    @Test
+    void getSupervisorID() {
+        when(supervisorService.getSupervisorID(1L)).thenReturn(new Supervisor(1L, "Valentino", "Giannico",
+                "valen@gmail.com", new Zone(), null));
+        Supervisor getSupervisor = supervisorService.getSupervisorID(1L);
         Assertions.assertNotNull(getSupervisor);
     }
 }

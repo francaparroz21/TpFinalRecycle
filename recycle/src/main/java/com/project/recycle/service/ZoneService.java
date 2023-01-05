@@ -5,6 +5,8 @@ import com.project.recycle.repository.ZoneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ZoneService {
 
@@ -18,5 +20,9 @@ public class ZoneService {
     public String deleteZone(Long id){
         zoneRepository.deleteById(id);
         return "zone removed";
+    }
+
+    public List<Zone> getAllZones(){
+        return zoneRepository.findAll();
     }
 }
