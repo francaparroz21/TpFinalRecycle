@@ -24,4 +24,13 @@ public class RecipeService {
     public List<Recipe> getRecipesByClassification(String classification) {
         return repository.findByClassification(classification);
     }
+
+    public boolean deleteRecipe(Long id){
+        try{
+            repository.deleteById(id);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+    }
 }

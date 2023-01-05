@@ -24,4 +24,9 @@ public class RecipeController {
     public List<Recipe> getRecipesByClassification(@PathVariable ("classification") String classification){
         return service.getRecipesByClassification(classification);
     }
+
+    @DeleteMapping("/{id}")
+    public boolean deleteRecipe(@PathVariable("id") Long id){
+        return service.deleteRecipe(id);
+    }
 }
