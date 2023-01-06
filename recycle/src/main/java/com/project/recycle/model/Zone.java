@@ -1,6 +1,8 @@
 package com.project.recycle.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 
 import java.util.List;
 
@@ -19,9 +21,12 @@ public class Zone {
     private String latitude;
 
     @Column(name = "classification")
+    @Enumerated
     private Classification classification;
 
     @Column(name = "usedCapacityPercentage")
+    @Min(value = 1, message = "Minium capacity is 1%")
+    @Max(value = 100, message = "Maximum capacity is 100%")
     private int usedCapacityPercentage;
 
     @Column(name = "supervisors")

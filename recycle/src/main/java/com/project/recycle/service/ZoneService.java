@@ -29,4 +29,15 @@ public class ZoneService {
     public Zone getZoneID(Long id){
         return zoneRepository.findById(id).get();
     }
+
+    public Zone updateZone(Long id, Zone zone){
+        Zone zoneSearch = zoneRepository.findById(id).get();
+        if(zone.getClassification() != null){
+            zoneSearch.setClassification(zone.getClassification());
+        }
+        if(zone.getUsedCapacityPercentage() != 0){
+            zoneSearch.setUsedCapacityPercentage(zone.getUsedCapacityPercentage());
+        }
+        return zoneRepository.save(zoneSearch);
+    }
 }
