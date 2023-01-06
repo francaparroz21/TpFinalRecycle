@@ -13,6 +13,7 @@ import org.mockito.Mock;
 
 import static org.mockito.Mockito.when;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 import java.util.Optional;
@@ -28,8 +29,9 @@ class SupervisorServiceTest {
     SupervisorService supervisorService;
     @Test
     void add_supervisor(){
+        Zone zone = new Zone(1L,"545454", "w3343434", Classification.GLASS, 76, null);
         Supervisor supervisor = new Supervisor("Valentino", "Giannico",
-                "valen@gmail.com", new Zone("545454", "w3343434", Classification.GLASS, 76, null), null);
+                "valen@gmail.com", zone, null);
         when(supervisorRepository.save(supervisor)).thenReturn(supervisor);
         Supervisor new_supervisor = supervisorService.addSupervisor(supervisor);
         Assertions.assertEquals(new_supervisor.getEmail(), supervisor.getEmail());

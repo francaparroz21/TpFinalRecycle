@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86acafd4-f669-4888-bc10-dd83dc0c35ef" name="Changes" comment="" />
+    <list default="true" id="86acafd4-f669-4888-bc10-dd83dc0c35ef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/SupervisorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/SupervisorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/service/SupervisorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/service/SupervisorServiceTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,8 +67,8 @@
       <recent name="com.project.recycle.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ZoneServiceTest">
-    <configuration name="SupervisorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SupervisorServiceTest.add_supervisor">
+    <configuration name="SupervisorControllerTest.add_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
         <pattern>
@@ -74,7 +78,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
       <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.SupervisorControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="add_supervisor" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,6 +99,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SupervisorServiceTest.add_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="recycle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.recycle.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.recycle.service" />
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.SupervisorServiceTest" />
+      <option name="METHOD_NAME" value="add_supervisor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ZoneControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
@@ -105,22 +126,6 @@
       <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
       <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.ZoneControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZoneControllerTest.updateZone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="recycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.recycle.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.ZoneControllerTest" />
-      <option name="METHOD_NAME" value="updateZone" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SupervisorServiceTest.add_supervisor" />
+        <item itemvalue="JUnit.SupervisorControllerTest.add_supervisor" />
         <item itemvalue="JUnit.ZoneServiceTest" />
         <item itemvalue="JUnit.SupervisorServiceTest" />
         <item itemvalue="JUnit.ZoneControllerTest" />
-        <item itemvalue="JUnit.SupervisorControllerTest" />
-        <item itemvalue="JUnit.ZoneControllerTest.updateZone" />
       </list>
     </recent_temporary>
   </component>
