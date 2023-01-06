@@ -1,6 +1,7 @@
 package com.project.recycle.controller;
 
 import com.project.recycle.model.Zone;
+import com.project.recycle.repository.ZoneRepository;
 import com.project.recycle.service.ZoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,9 @@ public class ZoneController {
 
     @Autowired
     ZoneService zoneService;
+
+    @Autowired
+    ZoneRepository zoneRepository;
 
     @PostMapping
     public Zone addZone(@RequestBody Zone zone){
@@ -32,5 +36,10 @@ public class ZoneController {
     @GetMapping("/{id}")
     public Zone getZoneID(@PathVariable("id") Long id){
         return  zoneService.getZoneID(id);
+    }
+
+    @PutMapping("/{id}")
+    public Zone updateZone(@PathVariable("id") Long id, @RequestBody Zone zone){
+        return zoneService.updateZone(id, zone);
     }
 }
