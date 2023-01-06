@@ -34,7 +34,7 @@ class SupervisorServiceTest {
                 "valen@gmail.com", zone, null);
         when(supervisorRepository.save(supervisor)).thenReturn(supervisor);
         Supervisor new_supervisor = supervisorService.addSupervisor(supervisor);
-        Assertions.assertEquals(new_supervisor.getEmail(), supervisor.getEmail());
+        Assertions.assertEquals(new_supervisor, supervisor);
     }
 
     @Test

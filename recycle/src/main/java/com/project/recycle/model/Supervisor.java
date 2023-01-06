@@ -32,7 +32,7 @@ public class Supervisor {
     @Column(nullable = false)
     @NotNull(message = "Email field cannot be null")
     private String email;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "zoneID")
     private Zone zoneInSupervision;
     private List<String> reports;

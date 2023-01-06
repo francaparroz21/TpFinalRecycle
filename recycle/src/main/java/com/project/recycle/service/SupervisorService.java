@@ -30,16 +30,14 @@ public class SupervisorService {
     }
 
     public Supervisor addSupervisor(Supervisor supervisor){
-
-        Supervisor newSupervisor = supervisorRepository.save(supervisor);
-        Zone zone = zoneRepository.findById(newSupervisor.getZoneInSupervision().getZoneID()).get();
-        List<Long> listSupervisors = zone.getSupervisorsID();
-        listSupervisors.add(newSupervisor.getSupervisorID());
-        zone.setSupervisorsID(listSupervisors);
-        zoneRepository.save(zone);
-
-        Supervisor supervisorSaved = supervisorRepository.findById(newSupervisor.getSupervisorID()).get();
-        supervisorSaved.setZoneInSupervision(zone);
+        Supervisor supervisorSaved = supervisorRepository.save(supervisor);
+        try {
+            Zone zone = zoneRepository.findById(supervisor.getZoneInSupervision().getZoneID()).get();
+            List<Long> listSupervisors = zone.getSupervisorsID();
+            listSupervisors.add(supervisorSaved.getSupervisorID());
+            zone.setSupervisorsID(listSupervisors);
+            zoneRepository.save(zone);
+        }catch (Exception e){}
         return supervisorRepository.save(supervisorSaved);
     }
 
