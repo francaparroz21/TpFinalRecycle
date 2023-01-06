@@ -29,14 +29,12 @@ public class Supervisor {
     private String lastName;
 
     @Email(message = "Write a real email.")
-    @Column(name = "email", nullable = false)
+    @Column(nullable = false)
     @NotNull(message = "Email field cannot be null")
     private String email;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "zoneID")
     private Zone zoneInSupervision;
-    //@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    //@Nullable
     private List<String> reports;
 
     public Supervisor(){};
