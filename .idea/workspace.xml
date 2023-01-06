@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86acafd4-f669-4888-bc10-dd83dc0c35ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Supervisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Supervisor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/SupervisorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/SupervisorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/service/SupervisorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/service/SupervisorServiceTest.java" afterDir="false" />
     </list>
@@ -69,6 +68,21 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.SupervisorServiceTest.add_supervisor">
+    <configuration name="SupervisorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="recycle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.recycle.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.SupervisorControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SupervisorControllerTest.add_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
@@ -81,21 +95,6 @@
       <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.SupervisorControllerTest" />
       <option name="METHOD_NAME" value="add_supervisor" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SupervisorServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="recycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.recycle.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.SupervisorServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,9 +149,9 @@
       <list>
         <item itemvalue="JUnit.SupervisorServiceTest.add_supervisor" />
         <item itemvalue="JUnit.SupervisorControllerTest.add_supervisor" />
-        <item itemvalue="JUnit.ZoneServiceTest" />
-        <item itemvalue="JUnit.SupervisorServiceTest" />
         <item itemvalue="JUnit.ZoneControllerTest" />
+        <item itemvalue="JUnit.SupervisorControllerTest" />
+        <item itemvalue="JUnit.ZoneServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -184,22 +183,22 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$ZoneServiceTest.ic" NAME="ZoneServiceTest Coverage Results" MODIFIED="1673022842069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$ZoneServiceTest.ic" NAME="ZoneServiceTest Coverage Results" MODIFIED="1673034212188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorControllerTest.ic" NAME="SupervisorControllerTest Coverage Results" MODIFIED="1673022759881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorControllerTest.ic" NAME="SupervisorControllerTest Coverage Results" MODIFIED="1673034243870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TpFinalRecycle$RecycleApplicationTests.ic" NAME="RecycleApplicationTests Coverage Results" MODIFIED="1672153616281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$ZoneControllerTest.ic" NAME="ZoneControllerTest Coverage Results" MODIFIED="1673022789653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$ZoneControllerTest.ic" NAME="ZoneControllerTest Coverage Results" MODIFIED="1673034273897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorControllerTest_add_supervisor.ic" NAME="SupervisorControllerTest.add_supervisor Coverage Results" MODIFIED="1672153575293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.Controller.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorServiceTest.ic" NAME="SupervisorServiceTest Coverage Results" MODIFIED="1673022813871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorServiceTest.ic" NAME="SupervisorServiceTest Coverage Results" MODIFIED="1673034104363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorServiceTest_add_supervisor.ic" NAME="SupervisorServiceTest.add_supervisor Coverage Results" MODIFIED="1672945237176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
