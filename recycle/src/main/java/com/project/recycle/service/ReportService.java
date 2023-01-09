@@ -1,6 +1,7 @@
 package com.project.recycle.service;
 
 import com.project.recycle.model.Report;
+import com.project.recycle.model.Status;
 import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ReportRepository;
 import com.project.recycle.repository.ZoneRepository;
@@ -32,13 +33,22 @@ public class ReportService {
         return reportRepository.findAll(PageRequest.of(page, size)).getContent();
     }
 
+    public List<Report> getReportsByStatus(Status status) {
+        return reportRepository.findByStatus(status).get();
+    }
+
     public Report saveReport(Report report) {
+
         return reportRepository.save(report);
     }
 
-    public String deleteReport(Long id) {
-        reportRepository.deleteById(id);
-        return "Report deleted succesfully";
+    public boolean deleteReport(Long id) {
+        try {
+            reportRepository.deleteById(id);
+            return true;
+        } catch(Exception ex) {
+            return false;
+        }
     }
 
 }

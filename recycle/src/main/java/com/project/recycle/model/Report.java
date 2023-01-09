@@ -16,8 +16,10 @@ public class Report {
     @Column(length = 300, nullable = false)
     private String reportMessage;
 
-    @ManyToOne
-    @JoinColumn(name = "zoneId", insertable = false, updatable = false)
+    private Status status;
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "zoneId", insertable = false, updatable = true)
     private Zone zone;
 
     @Column(length = 50, nullable = false)
@@ -27,9 +29,10 @@ public class Report {
 
     }
 
-    public Report(LocalDate date, String reportMessage, Zone zone, String complainant) {
+    public Report(LocalDate date, String reportMessage, Status status, Zone zone, String complainant) {
         this.date = date;
         this.reportMessage = reportMessage;
+        this.status = status;
         this.zone = zone;
         this.complainant = complainant;
     }
@@ -82,12 +85,21 @@ public class Report {
         this.zone = zone;
     }
 
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Report{" +
-                "id=" + reportId +
+                "reportId=" + reportId +
                 ", date=" + date +
                 ", reportMessage='" + reportMessage + '\'' +
+                ", status=" + status +
                 ", zone=" + zone +
                 ", complainant='" + complainant + '\'' +
                 '}';

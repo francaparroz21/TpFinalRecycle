@@ -1,6 +1,7 @@
 package com.project.recycle.service;
 
 import com.project.recycle.model.Report;
+import com.project.recycle.model.Status;
 import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ReportRepository;
 import org.junit.jupiter.api.Test;
@@ -34,8 +35,9 @@ class ReportServiceTest {
         report1.setReportMessage("Denuncia por vandalismo de 3 chicos.");
         report1.setZone(new Zone());
         report1.setComplainant("Cristian Romero");
-        Report report2 = new Report(LocalDate.of(2021, 9, 23), "Denuncia por hurto", new Zone(), "Mirta Braun");
-        Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", new Zone(), "Marcos Acuña");
+        report1.setStatus(Status.RESOLVED);
+        Report report2 = new Report(LocalDate.of(2021, 9, 23), "Denuncia por hurto", Status.RESOLVED , new Zone(), "Mirta Braun");
+        Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", Status.RESOLVED, new Zone(), "Marcos Acuña");
         when(reportRepository.findAll()).thenReturn(Arrays.asList(report1, report2, report3));
 
         List<Report> getReports = reportService.getAllReports();
@@ -51,20 +53,20 @@ class ReportServiceTest {
 
     @Test
     void saveReport() {
-        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", new Zone(), "Lucas Suarez");
+        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", Status.RESOLVED, new Zone(), "Lucas Suarez");
         when(reportRepository.save(report1)).thenReturn(report1);
 
         Report reportSaved = reportService.saveReport(report1);
 
         assertEquals(report1.getId(), reportSaved.getId());
+        assertEquals(report1.getStatus(), reportSaved.getStatus());
         assertEquals(report1.getComplainant(), reportSaved.getComplainant());
         assertEquals(report1.getReportMessage(), reportSaved.getReportMessage());
     }
 
     @Test
     void deleteReport() {
-        Report report1 = new Report(1L, LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", new Zone(), "Lucas Suarez");
-        String deleted = reportService.deleteReport(1l);
-        assertEquals("Report deleted succesfully", deleted);
+        boolean deleted = reportService.deleteReport(1l);
+        assertEquals(false, deleted);
     }
 }

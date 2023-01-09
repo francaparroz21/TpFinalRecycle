@@ -1,6 +1,7 @@
 package com.project.recycle;
 
 import com.project.recycle.model.Report;
+import com.project.recycle.model.Status;
 import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ReportRepository;
 import com.project.recycle.repository.ZoneRepository;
@@ -35,10 +36,10 @@ public class RecycleApplication implements CommandLineRunner {
 		Zone zone1 = new Zone("123123", "4124123", "glass", 50000, "Lucas");
 		zoneRepository.save(zone1);
 		Zone foundZone = zoneRepository.findById(1L).get();
-		Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", foundZone, "Lucas Suarez");
-		Report report2 = new Report(LocalDate.of(2021, 9, 23), "Denuncia por hurto", foundZone, "Mirta Braun");
-		Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", foundZone, "Marcos Acuña");
-		Report report4 = new Report(LocalDate.of(2022, 12, 27), "Denuncia por robo de maquinaria", foundZone, "Pedro Fernandez");
+		Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", Status.RESOLVED, foundZone, "Lucas Suarez");
+		Report report2 = new Report(LocalDate.of(2021, 9, 23), "Denuncia por hurto", Status.PENDING, foundZone, "Mirta Braun");
+		Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", Status.PENDING, foundZone, "Marcos Acuña");
+		Report report4 = new Report(LocalDate.of(2022, 12, 27), "Denuncia por robo de maquinaria", Status.RESOLVED, foundZone, "Pedro Fernandez");
 		List<Report> list = Arrays.asList(report1, report2, report3, report4);
 		list.forEach(reportRepository::save);
 
