@@ -4,34 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86acafd4-f669-4888-bc10-dd83dc0c35ef" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/SupervisorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/SupervisorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/service/SupervisorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/service/SupervisorServiceTest.java" afterDir="false" />
+    <list default="true" id="5f10cc5a-5e6d-4ac6-b142-1d160e0c65f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Zone.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Zone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/repository/ZoneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/repository/ZoneRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/ReportControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/ReportControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/service/ReportServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/service/ReportServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/RecycleApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/RecycleApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/controller/ReportController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Report.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Report.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Zone.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Zone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/repository/ReportRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/repository/ZoneRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/repository/ZoneRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/service/ReportService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/ReportControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/ReportControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/service/ReportServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/service/ReportServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="reportCopy" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/RecycleApplicationTests.java" root0="FORCE_HIGHLIGHTING" />
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,7 +59,10 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2JvWUAcTGtn3DneixvPK5ZYF6kv" />
+  <component name="ProjectId" id="2JStC87vsOGfJyrvx8iCHyS127D" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -52,23 +71,30 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PIL/Desktop/TpFinalReciclaje/TpFinalRecycle&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PIL/IdeaProjects/TPFinalReciclaje/TpFinalRecycle&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.project.recycle.usecase" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.project.recycle.controller" />
       <recent name="com.project.recycle.service" />
+      <recent name="com.project.recycle.controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.project.recycle.repository" />
+      <recent name="com.project.recycle.usecase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SupervisorServiceTest.add_supervisor">
-    <configuration name="SupervisorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ReportControllerTest">
+    <configuration name="ReportControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
         <pattern>
@@ -77,13 +103,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.SupervisorControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.ReportControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupervisorControllerTest.add_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReportControllerTest.getAllReports" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
         <pattern>
@@ -92,14 +118,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.SupervisorControllerTest" />
-      <option name="METHOD_NAME" value="add_supervisor" />
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.ReportControllerTest" />
+      <option name="METHOD_NAME" value="getAllReports" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupervisorServiceTest.add_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReportControllerTest.getByPages" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="recycle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.recycle.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.ReportControllerTest" />
+      <option name="METHOD_NAME" value="getByPages" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
         <pattern>
@@ -108,29 +150,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.recycle.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.SupervisorServiceTest" />
-      <option name="METHOD_NAME" value="add_supervisor" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZoneControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="recycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.recycle.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.ZoneControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.ReportServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZoneServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReportServiceTest.getReportsByPages" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
         <pattern>
@@ -139,30 +165,31 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.recycle.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.ZoneServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.ReportServiceTest" />
+      <option name="METHOD_NAME" value="getReportsByPages" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SupervisorServiceTest.add_supervisor" />
-        <item itemvalue="JUnit.SupervisorControllerTest.add_supervisor" />
-        <item itemvalue="JUnit.ZoneControllerTest" />
-        <item itemvalue="JUnit.SupervisorControllerTest" />
-        <item itemvalue="JUnit.ZoneServiceTest" />
+        <item itemvalue="JUnit.ReportServiceTest.getReportsByPages" />
+        <item itemvalue="JUnit.ReportServiceTest" />
+        <item itemvalue="JUnit.ReportControllerTest.getByPages" />
+        <item itemvalue="JUnit.ReportControllerTest" />
+        <item itemvalue="JUnit.ReportControllerTest.getAllReports" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="86acafd4-f669-4888-bc10-dd83dc0c35ef" name="Changes" comment="" />
-      <created>1672959050305</created>
+      <changelist id="5f10cc5a-5e6d-4ac6-b142-1d160e0c65f4" name="Changes" comment="" />
+      <created>1672083182066</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1672959050305</updated>
+      <updated>1672083182066</updated>
     </task>
     <servers />
   </component>
@@ -174,34 +201,23 @@
             <State />
           </value>
         </entry>
-        <entry key="c05e516c-bae7-417a-9228-12820754907c">
-          <value>
-            <State />
-          </value>
-        </entry>
       </map>
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$ZoneServiceTest.ic" NAME="ZoneServiceTest Coverage Results" MODIFIED="1673034212188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$ReportServiceTest.ic" NAME="ReportServiceTest Coverage Results" MODIFIED="1672435565009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorControllerTest.ic" NAME="SupervisorControllerTest Coverage Results" MODIFIED="1673034243870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$ReportControllerTest.ic" NAME="ReportControllerTest Coverage Results" MODIFIED="1672437172805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.controller.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$RecycleApplicationTests.ic" NAME="RecycleApplicationTests Coverage Results" MODIFIED="1672153616281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$ReportControllerTest_deleteReport.ic" NAME="ReportControllerTest.deleteReport Coverage Results" MODIFIED="1672432779191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.project.recycle.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$RecycleApplication.ic" NAME="RecycleApplication Coverage Results" MODIFIED="1672437056250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$ZoneControllerTest.ic" NAME="ZoneControllerTest Coverage Results" MODIFIED="1673034273897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.project.recycle.controller.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorControllerTest_add_supervisor.ic" NAME="SupervisorControllerTest.add_supervisor Coverage Results" MODIFIED="1672153575293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.project.recycle.Controller.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorServiceTest.ic" NAME="SupervisorServiceTest Coverage Results" MODIFIED="1673034104363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.project.recycle.service.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorServiceTest_add_supervisor.ic" NAME="SupervisorServiceTest.add_supervisor Coverage Results" MODIFIED="1672945237176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$ReportServiceTest_getAllReports.ic" NAME="ReportServiceTest.getAllReports Coverage Results" MODIFIED="1672435522934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.service.*</FILTER>
     </SUITE>
   </component>
