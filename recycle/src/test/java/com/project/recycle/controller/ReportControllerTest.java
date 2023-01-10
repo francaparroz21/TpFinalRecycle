@@ -1,7 +1,7 @@
 package com.project.recycle.controller;
 
 import com.project.recycle.model.Report;
-import com.project.recycle.model.Status;
+import com.project.recycle.model.ReportStatus;
 import com.project.recycle.model.Zone;
 import com.project.recycle.service.ReportService;
 import org.junit.jupiter.api.Test;
@@ -30,9 +30,9 @@ class ReportControllerTest {
 
     @Test
     void getAllReports() {
-        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", Status.RESOLVED, new Zone(), "Lucas Suarez");
-        Report report2 = new Report(LocalDate.of(2021, 9, 23), "Denuncia por hurto", Status.PENDING, new Zone(), "Mirta Braun");
-        Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", Status.RESOLVED, new Zone(), "Marcos Acuña");
+        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", ReportStatus.RESOLVED, new Zone(), "Lucas Suarez");
+        Report report2 = new Report(LocalDate.of(2021, 9, 23), "Denuncia por hurto", ReportStatus.PENDING, new Zone(), "Mirta Braun");
+        Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", ReportStatus.RESOLVED, new Zone(), "Marcos Acuña");
         when(reportService.getAllReports()).thenReturn(Arrays.asList(report1, report2, report3));
 
         ResponseEntity<List<Report>> getReports = reportController.getAllReports();
@@ -43,8 +43,8 @@ class ReportControllerTest {
 
     @Test
     void getByPages() {
-        Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", Status.RESOLVED, new Zone(), "Marcos Acuña");
-        Report report4 = new Report(LocalDate.of(2022, 12, 27), "Denuncia por robo de maquinaria", Status.RESOLVED, new Zone(), "Pedro Fernandez");
+        Report report3 = new Report(LocalDate.of(2022, 3, 03), "Denuncia por mal uso de los desechos", ReportStatus.RESOLVED, new Zone(), "Marcos Acuña");
+        Report report4 = new Report(LocalDate.of(2022, 12, 27), "Denuncia por robo de maquinaria", ReportStatus.RESOLVED, new Zone(), "Pedro Fernandez");
 
         when(reportService.getReportsByPages(1, 3)).thenReturn(Arrays.asList(report3, report4));
         ResponseEntity<List<Report>> reportsByPages = reportController.getByPages(1, 3);
@@ -54,7 +54,7 @@ class ReportControllerTest {
 
     @Test
     void newReport() {
-        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", Status.RESOLVED, new Zone(), "Lucas Suarez");
+        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", ReportStatus.RESOLVED, new Zone(), "Lucas Suarez");
         when(reportService.saveReport(report1)).thenReturn(report1);
         HttpStatusCode reportStatus = reportController.newReport(report1).getStatusCode();
         ResponseEntity<Report> reportSaved = reportController.newReport(report1);
@@ -67,7 +67,7 @@ class ReportControllerTest {
 
     @Test
     void deleteReport() {
-        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", Status.RESOLVED, new Zone(), "Lucas Suarez");
+        Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", ReportStatus.RESOLVED, new Zone(), "Lucas Suarez");
         report1.setId(1L);
         HttpStatusCode reportStatus = reportController.deleteReport(1l).getStatusCode();
         assertEquals(HttpStatusCode.valueOf(204), reportStatus);

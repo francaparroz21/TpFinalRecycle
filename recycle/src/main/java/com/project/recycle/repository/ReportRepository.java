@@ -1,7 +1,7 @@
 package com.project.recycle.repository;
 
 import com.project.recycle.model.Report;
-import com.project.recycle.model.Status;
+import com.project.recycle.model.ReportStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
@@ -16,7 +16,7 @@ public interface ReportRepository extends JpaRepository<Report, Long>, PagingAnd
 
     List<Report> findByDate(LocalDate Date);
 
-    Optional<List<Report>> findByStatus(Status status);
+    Optional<List<Report>> findByStatus(ReportStatus status);
 
     List<Report> findByZone(String zone);
 

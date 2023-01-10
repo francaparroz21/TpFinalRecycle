@@ -1,5 +1,6 @@
 package com.project.recycle.model;
 
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -31,6 +32,10 @@ public class Zone {
 
     @Column(name = "supervisors")
     private List<Long> supervisorsID;
+
+    @OneToMany(mappedBy = "zone")
+    @JsonIgnore
+    private List<Report> reports;
 
     public Zone(String longitude, String latitude, Classification classification,
                 int usedCapacityPercentage, List<Long> supervisorsID) {
@@ -98,5 +103,26 @@ public class Zone {
 
     public void setSupervisorsID(List<Long> supervisorsID) {
         this.supervisorsID = supervisorsID;
+    }
+
+    public List<Report> getReports() {
+        return reports;
+    }
+
+    public void setReports(List<Report> reports) {
+        this.reports = reports;
+    }
+
+    @Override
+    public String toString() {
+        return "Zone{" +
+                "zoneID=" + zoneID +
+                ", longitude='" + longitude + '\'' +
+                ", latitude='" + latitude + '\'' +
+                ", classification=" + classification +
+                ", usedCapacityPercentage=" + usedCapacityPercentage +
+                ", supervisorsID=" + supervisorsID +
+                ", reports=" + reports +
+                '}';
     }
 }

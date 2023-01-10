@@ -1,7 +1,7 @@
 package com.project.recycle.controller;
 
 import com.project.recycle.model.Report;
-import com.project.recycle.model.Status;
+import com.project.recycle.model.ReportStatus;
 import com.project.recycle.repository.ReportRepository;
 import com.project.recycle.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +34,7 @@ public class ReportController {
     }
 
     @GetMapping("/{status}")
-    ResponseEntity<List<Report>> getByStatus(@PathVariable Status status) {
+    ResponseEntity<List<Report>> getByStatus(@PathVariable ReportStatus status) {
         try {
             return new ResponseEntity<>(reportRepository.findByStatus(status).get(), HttpStatus.OK);
         } catch(Exception ex) {

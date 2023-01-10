@@ -1,8 +1,7 @@
 package com.project.recycle.service;
 
 import com.project.recycle.model.Report;
-import com.project.recycle.model.Status;
-import com.project.recycle.model.Zone;
+import com.project.recycle.model.ReportStatus;
 import com.project.recycle.repository.ReportRepository;
 import com.project.recycle.repository.ZoneRepository;
 import org.apache.commons.logging.Log;
@@ -33,7 +32,7 @@ public class ReportService {
         return reportRepository.findAll(PageRequest.of(page, size)).getContent();
     }
 
-    public List<Report> getReportsByStatus(Status status) {
+    public List<Report> getReportsByStatus(ReportStatus status) {
         return reportRepository.findByStatus(status).get();
     }
 
