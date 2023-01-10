@@ -2,9 +2,7 @@ package com.project.recycle.service;
 
 import com.project.recycle.model.Classification;
 import com.project.recycle.model.Supervisor;
-import com.project.recycle.model.Zone;
 import com.project.recycle.repository.SupervisorRepository;
-import com.project.recycle.repository.ZoneRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -13,9 +11,7 @@ import org.mockito.Mock;
 
 import static org.mockito.Mockito.when;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 import java.util.Optional;

@@ -1,7 +1,6 @@
 package com.project.recycle.controller;
 
 import com.project.recycle.model.Supervisor;
-import com.project.recycle.model.Zone;
 import com.project.recycle.service.SupervisorService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 

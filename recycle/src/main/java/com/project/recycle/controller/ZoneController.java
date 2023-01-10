@@ -1,6 +1,5 @@
 package com.project.recycle.controller;
 
-import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ZoneRepository;
 import com.project.recycle.service.ZoneService;
 import org.springframework.beans.factory.annotation.Autowired;
