@@ -1,14 +1,15 @@
 package com.project.recycle.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "report")
+@JsonIdentityInfo(generator= ObjectIdGenerators.UUIDGenerator.class, property="id")
 public class Report {
 
     @Id

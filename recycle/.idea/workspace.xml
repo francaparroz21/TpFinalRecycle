@@ -5,23 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74f181cd-a7a1-47f7-9b1b-445bb3feaefa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recycle.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/recycle/RecycleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/recycle/RecycleApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/recycle/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/recycle/controller/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/recycle/model/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/recycle/model/Report.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/recycle/model/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/recycle/model/Zone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/recycle/model/Zone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/recycle/repository/ReportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/recycle/repository/ReportRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/recycle/controller/ZoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/recycle/controller/ZoneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/recycle/repository/ZoneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/recycle/repository/ZoneRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/recycle/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/recycle/service/ReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/recycle/controller/ReportControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/project/recycle/controller/ReportControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/recycle/service/ReportServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/project/recycle/service/ReportServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/Controller/SupervisorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/Controller/ZoneController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/Model/Classification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/Model/ReportStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/Model/Supervisor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/Model/Zone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/RecycleApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/Repository/SupervisorRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/Repository/ZoneRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/Service/SupervisorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/Service/ZoneService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/controller/ReportController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/exceptions/ApplicationHandlerException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/model/Report.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/repository/ReportRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/recycle/service/ReportService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +36,7 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -61,17 +65,20 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PIL/IdeaProjects/TPFinalReciclaje&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/PIL/IdeaProjects/TPFinalReciclaje/TpFinalRecycle/recycle/src/main/java/com/project/recycle/model"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.project.recycle.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PIL\IdeaProjects\TPFinalReciclaje\TpFinalRecycle\recycle\src\main\java\com\project\recycle\model" />
     </key>
   </component>
   <component name="RunManager">

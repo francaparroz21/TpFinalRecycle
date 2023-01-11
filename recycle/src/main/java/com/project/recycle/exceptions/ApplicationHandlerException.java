@@ -1,6 +1,6 @@
 package com.project.recycle.exceptions;
 
-import jakarta.validation.ConstraintViolationException;
+import javax.validation.ConstraintViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
