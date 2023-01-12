@@ -15,9 +15,7 @@ public class Report {
     private LocalDate date;
     @Column(length = 300, nullable = false)
     private String reportMessage;
-
     private Status status;
-
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "zoneId", insertable = false, updatable = true)
     private Zone zone;
