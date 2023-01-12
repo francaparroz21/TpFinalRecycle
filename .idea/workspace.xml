@@ -4,7 +4,131 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86acafd4-f669-4888-bc10-dd83dc0c35ef" name="Changes" comment="" />
+    <list default="true" id="86acafd4-f669-4888-bc10-dd83dc0c35ef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__ch_qos_logback_logback_core_1_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_h2database_h2_2_1_214.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__io_micrometer_micrometer_commons_1_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__io_micrometer_micrometer_observation_1_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_19_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_19_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_assertj_assertj_core_3_23_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_eclipse_angus_angus_activation_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_1_6_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_mockito_mockito_core_4_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_data_spring_data_commons_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_aop_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_aspects_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_beans_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_context_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_core_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_expression_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_jcl_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_jdbc_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_orm_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_test_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_tx_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_web_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_springframework_spring_webmvc_6_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/libraries/Maven__org_yaml_snakeyaml_1_33.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/controller/ReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/model/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/repository/ReportRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/service/ReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/ReportControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/service/ReportServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/controller/ReportController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Report.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/model/Zone.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/repository/ReportRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/repository/ZoneRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/service/ReportService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/controller/ReportControllerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/service/ReportServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/recycle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/recycle.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/main/java/com/project/recycle/RecycleApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/ZoneControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/src/test/java/com/project/recycle/controller/ZoneControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/RecycleApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/classes/com/project/recycle/RecycleApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/RecycleApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/recycle/target/test-classes/com/project/recycle/RecycleApplicationTests.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +138,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -51,19 +176,53 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PIL/Desktop/TpFinalReciclaje/TpFinalRecycle&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PIL/Desktop/TpFinalReciclaje/TpFinalRecycle&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PIL\Desktop\TpFinalReciclaje\TpFinalRecycle\recycle\src\test\resources" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.project.recycle.controller" />
       <recent name="com.project.recycle.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SupervisorServiceTest.add_supervisor">
+  <component name="RunManager" selected="JUnit.com.project.recycle.service in recycle">
+    <configuration name="RecycleApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.RecycleApplication" />
+      <module name="recycle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.recycle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReportControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="recycle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.recycle.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.ReportControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SupervisorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
@@ -79,7 +238,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupervisorControllerTest.add_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.project.recycle.controller in recycle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
         <pattern>
@@ -88,14 +247,12 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.SupervisorControllerTest" />
-      <option name="METHOD_NAME" value="add_supervisor" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupervisorServiceTest.add_supervisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.project.recycle.service in recycle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="recycle" />
       <extension name="coverage">
         <pattern>
@@ -104,50 +261,81 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.recycle.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.SupervisorServiceTest" />
-      <option name="METHOD_NAME" value="add_supervisor" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZoneControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="recycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.recycle.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.controller.ZoneControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZoneServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="recycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.recycle.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.recycle.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.recycle.service.ZoneServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="recycle" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="recycle" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="recycle" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SupervisorServiceTest.add_supervisor" />
-        <item itemvalue="JUnit.SupervisorControllerTest.add_supervisor" />
-        <item itemvalue="JUnit.ZoneControllerTest" />
+        <item itemvalue="JUnit.com.project.recycle.service in recycle" />
+        <item itemvalue="JUnit.com.project.recycle.controller in recycle" />
         <item itemvalue="JUnit.SupervisorControllerTest" />
-        <item itemvalue="JUnit.ZoneServiceTest" />
+        <item itemvalue="JUnit.ReportControllerTest" />
+        <item itemvalue="Application.RecycleApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +367,16 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$com_project_recycle_controller_in_recycle.ic" NAME="com.project.recycle.controller in recycle Coverage Results" MODIFIED="1673282313204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.project.recycle.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$ReportControllerTest.ic" NAME="ReportControllerTest Coverage Results" MODIFIED="1673281325581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.project.recycle.controller.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/TpFinalRecycle$ZoneServiceTest.ic" NAME="ZoneServiceTest Coverage Results" MODIFIED="1673034212188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.project.recycle.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TpFinalRecycle$com_project_recycle_service_in_recycle.ic" NAME="com.project.recycle.service in recycle Coverage Results" MODIFIED="1673282364279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.project.recycle.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TpFinalRecycle$SupervisorControllerTest.ic" NAME="SupervisorControllerTest Coverage Results" MODIFIED="1673034243870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

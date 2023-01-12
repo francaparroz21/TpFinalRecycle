@@ -74,4 +74,8 @@ class ZoneControllerTest {
         assertNotNull(zone);
         assertEquals(new_zone, zone);
     }
+
+    @Test
+    void updateZone() {
+    }
 }
