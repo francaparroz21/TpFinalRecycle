@@ -1,10 +1,12 @@
 package com.project.recycle;
 
+
 import com.project.recycle.repository.ReportRepository;
 import com.project.recycle.repository.ZoneRepository;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -19,6 +21,7 @@ public class RecycleApplication {
 		this.reportRepository = reportRepository;
 		this.zoneRepository = zoneRepository;
 	}
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(RecycleApplication.class, args);

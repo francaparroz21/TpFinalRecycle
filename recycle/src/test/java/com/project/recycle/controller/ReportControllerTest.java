@@ -1,5 +1,6 @@
 package com.project.recycle.controller;
 
+import com.project.recycle.RecycleApplication;
 import com.project.recycle.model.Report;
 import com.project.recycle.model.ReportStatus;
 import com.project.recycle.model.Zone;
@@ -11,6 +12,7 @@ import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDate;
