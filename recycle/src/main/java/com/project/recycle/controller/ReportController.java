@@ -1,7 +1,7 @@
 package com.project.recycle.controller;
 
 import com.project.recycle.model.Report;
-import com.project.recycle.model.Status;
+import com.project.recycle.model.ReportStatus;
 import com.project.recycle.repository.ReportRepository;
 import com.project.recycle.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,9 +34,9 @@ public class ReportController {
     }
 
     @GetMapping("/{status}")
-    ResponseEntity<List<Report>> getByStatus(@PathVariable Status status) {
+    ResponseEntity<List<Report>> getByStatus(@PathVariable ReportStatus status) {
         try {
-            return new ResponseEntity<>(reportRepository.findByStatus(status).get(), HttpStatus.OK);
+            return new ResponseEntity<>(reportService.getReportsByStatus(status), HttpStatus.OK);
         } catch(Exception ex) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -58,6 +58,11 @@ public class ReportController {
         } catch (Exception ex) {
             return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
         }
+    }
+
+    @PutMapping("/{id}")
+    ResponseEntity<Report> updateStatus(@PathVariable Long id, @RequestBody ReportStatus newStatus) {
+        return new ResponseEntity<>(reportService.updateReportStatus(id, newStatus), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

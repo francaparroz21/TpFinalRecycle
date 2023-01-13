@@ -1,5 +1,5 @@
 package com.project.recycle.model;
 
-public enum Status {
+public enum ReportStatus {
     RESOLVED, PENDING;
 }
