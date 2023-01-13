@@ -1,11 +1,14 @@
 package com.project.recycle.model;
 
-import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import javax.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "report")
+@JsonIdentityInfo(generator= ObjectIdGenerators.UUIDGenerator.class, property="id")
 public class Report {
 
     @Id
@@ -15,9 +18,12 @@ public class Report {
     private LocalDate date;
     @Column(length = 300, nullable = false)
     private String reportMessage;
-    private Status status;
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "zoneId", insertable = false, updatable = true)
+
+    @Enumerated(EnumType.ORDINAL)
+    private ReportStatus status;
+
+    @ManyToOne
+    @JoinColumn(name = "zoneId")
     private Zone zone;
 
     @Column(length = 50, nullable = false)
@@ -27,7 +33,7 @@ public class Report {
 
     }
 
-    public Report(LocalDate date, String reportMessage, Status status, Zone zone, String complainant) {
+    public Report(LocalDate date, String reportMessage, ReportStatus status, Zone zone, String complainant) {
         this.date = date;
         this.reportMessage = reportMessage;
         this.status = status;
@@ -83,11 +89,11 @@ public class Report {
         this.zone = zone;
     }
 
-    public Status getStatus() {
+    public ReportStatus getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(ReportStatus status) {
         this.status = status;
     }
 

@@ -1,13 +1,17 @@
 package com.project.recycle.model;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 import java.util.List;
 
 @Entity
 @Table(name = "zone")
+@JsonIdentityInfo(generator= ObjectIdGenerators.UUIDGenerator.class, property="id")
 public class Zone {
 
     @Id
@@ -30,7 +34,11 @@ public class Zone {
     private int usedCapacityPercentage;
 
     @Column(name = "supervisors")
+    @ElementCollection(targetClass= Long.class)
     private List<Long> supervisorsID;
+
+    @OneToMany(mappedBy = "zone", orphanRemoval = true)
+    private List<Report> reports;
 
     public Zone(String longitude, String latitude, Classification classification,
                 int usedCapacityPercentage, List<Long> supervisorsID) {
@@ -99,4 +107,14 @@ public class Zone {
     public void setSupervisorsID(List<Long> supervisorsID) {
         this.supervisorsID = supervisorsID;
     }
+
+    public List<Report> getReports() {
+        return reports;
+    }
+
+    public void setReports(List<Report> reports) {
+        this.reports = reports;
+    }
+
+
 }

@@ -1,8 +1,7 @@
 package com.project.recycle.service;
 
 import com.project.recycle.model.Report;
-import com.project.recycle.model.Status;
-import com.project.recycle.model.Zone;
+import com.project.recycle.model.ReportStatus;
 import com.project.recycle.repository.ReportRepository;
 import com.project.recycle.repository.ZoneRepository;
 import org.apache.commons.logging.Log;
@@ -10,8 +9,13 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ReflectionUtils;
 
+import java.lang.reflect.Field;
+import java.sql.Ref;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class ReportService {
@@ -33,8 +37,16 @@ public class ReportService {
         return reportRepository.findAll(PageRequest.of(page, size)).getContent();
     }
 
-    public List<Report> getReportsByStatus(Status status) {
+    public List<Report> getReportsByStatus(ReportStatus status) {
         return reportRepository.findByStatus(status).get();
+    }
+
+    public Report updateReportStatus(Long id, ReportStatus newStatus) {
+        return reportRepository.findById(id)
+                .map(report -> {
+                    report.setStatus(newStatus);
+                    return reportRepository.save(report);
+                }).get();
     }
 
     public Report saveReport(Report report) {
