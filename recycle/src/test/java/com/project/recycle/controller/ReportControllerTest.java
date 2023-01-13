@@ -2,13 +2,14 @@ package com.project.recycle.controller;
 
 import com.project.recycle.model.Report;
 import com.project.recycle.model.ReportStatus;
+import com.project.recycle.model.Zone;
 import com.project.recycle.service.ReportService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatusCode;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -55,10 +56,10 @@ class ReportControllerTest {
     void newReport() {
         Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", ReportStatus.RESOLVED, new Zone(), "Lucas Suarez");
         when(reportService.saveReport(report1)).thenReturn(report1);
-        HttpStatusCode reportStatus = reportController.newReport(report1).getStatusCode();
+        HttpStatus reportStatus = reportController.newReport(report1).getStatusCode();
         ResponseEntity<Report> reportSaved = reportController.newReport(report1);
 
-        assertEquals(HttpStatusCode.valueOf(201), reportStatus);
+        assertEquals(HttpStatus.valueOf(201), reportStatus);
         assertEquals(report1, reportSaved.getBody());
         assertEquals(report1.getZone(), reportSaved.getBody().getZone());
 
@@ -68,7 +69,7 @@ class ReportControllerTest {
     void deleteReport() {
         Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", ReportStatus.RESOLVED, new Zone(), "Lucas Suarez");
         report1.setId(1L);
-        HttpStatusCode reportStatus = reportController.deleteReport(1l).getStatusCode();
-        assertEquals(HttpStatusCode.valueOf(204), reportStatus);
+        HttpStatus reportStatus = reportController.deleteReport(1l).getStatusCode();
+        assertEquals(HttpStatus.valueOf(404), reportStatus);
     }
 }

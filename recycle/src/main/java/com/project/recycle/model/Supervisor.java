@@ -1,12 +1,7 @@
 package com.project.recycle.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nullable;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import java.util.List;
 
@@ -35,6 +30,8 @@ public class Supervisor {
     @ManyToOne
     @JoinColumn(name = "zoneID")
     private Zone zoneInSupervision;
+
+    @ElementCollection(targetClass=String.class)
     private List<String> reports;
 
     public Supervisor(){};

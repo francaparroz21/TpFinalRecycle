@@ -1,6 +1,7 @@
 package com.project.recycle.controller;
 
 import com.project.recycle.model.Classification;
+import com.project.recycle.model.Zone;
 import com.project.recycle.service.ZoneService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
