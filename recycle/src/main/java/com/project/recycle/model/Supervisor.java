@@ -29,6 +29,7 @@ public class Supervisor {
     private String email;
     @ManyToOne
     @JoinColumn(name = "zoneID")
+    @NotNull(message = "The zoneInSupervision attribute cannot be null")
     private Zone zoneInSupervision;
 
     @ElementCollection(targetClass=String.class)

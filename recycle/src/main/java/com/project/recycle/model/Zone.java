@@ -2,16 +2,19 @@ package com.project.recycle.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.databind.exc.InvalidFormatException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import java.util.List;
 
 @Entity
 @Table(name = "zone")
-@JsonIdentityInfo(generator= ObjectIdGenerators.UUIDGenerator.class, property="id")
+//@JsonIdentityInfo(generator= ObjectIdGenerators.UUIDGenerator.class, property="id")
 public class Zone {
 
     @Id
@@ -19,16 +22,20 @@ public class Zone {
     private Long zoneID;
 
     @Column(name = "longitude")
+    @NotNull(message = "The longitude attribute cannot be null")
     private String longitude;
 
     @Column(name = "latitude")
+    @NotNull(message = "The latitude attribute cannot be null")
     private String latitude;
 
     @Column(name = "classification")
+    @NotNull(message = "The classification attribute cannot be null")
     @Enumerated
     private Classification classification;
 
     @Column(name = "usedCapacityPercentage")
+    @NotNull(message = "The usedCapacityPercentage attribute cannot be null")
     @Min(value = 1, message = "Minium capacity is 1%")
     @Max(value = 100, message = "Maximum capacity is 100%")
     private int usedCapacityPercentage;
