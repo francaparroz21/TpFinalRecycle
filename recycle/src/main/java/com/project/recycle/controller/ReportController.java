@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/reports")
@@ -36,7 +37,7 @@ public class ReportController {
     @GetMapping("/{status}")
     ResponseEntity<List<Report>> getByStatus(@PathVariable ReportStatus status) {
         try {
-            return new ResponseEntity<>(reportRepository.findByStatus(status).get(), HttpStatus.OK);
+            return new ResponseEntity<>(reportService.getReportsByStatus(status), HttpStatus.OK);
         } catch(Exception ex) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -58,6 +59,11 @@ public class ReportController {
         } catch (Exception ex) {
             return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
         }
+    }
+
+    @PutMapping("/{id}")
+    ResponseEntity<Report> updateStatus(@PathVariable Long id, @RequestBody ReportStatus newStatus) {
+        return new ResponseEntity<>(reportService.updateReportStatus(id, newStatus), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

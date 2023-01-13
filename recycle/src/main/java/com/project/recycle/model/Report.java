@@ -2,7 +2,6 @@ package com.project.recycle.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-
 import javax.persistence.*;
 
 import java.time.LocalDate;
@@ -20,6 +19,7 @@ public class Report {
     @Column(length = 300, nullable = false)
     private String reportMessage;
 
+    @Enumerated(EnumType.ORDINAL)
     private ReportStatus status;
 
     @ManyToOne

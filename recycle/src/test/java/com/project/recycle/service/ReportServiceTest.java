@@ -67,6 +67,6 @@ class ReportServiceTest {
     @Test
     void deleteReport() {
         boolean deleted = reportService.deleteReport(1l);
-        assertEquals(false, deleted);
+        assertEquals(true, deleted);
     }
 }

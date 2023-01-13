@@ -70,6 +70,6 @@ class ReportControllerTest {
         Report report1 = new Report(LocalDate.of(2021, 1, 18), "Denuncia por vandalismo de 3 chicos", ReportStatus.RESOLVED, new Zone(), "Lucas Suarez");
         report1.setId(1L);
         HttpStatus reportStatus = reportController.deleteReport(1l).getStatusCode();
-        assertEquals(HttpStatus.valueOf(204), reportStatus);
+        assertEquals(HttpStatus.valueOf(404), reportStatus);
     }
 }

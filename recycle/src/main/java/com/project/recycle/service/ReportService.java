@@ -9,8 +9,13 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ReflectionUtils;
 
+import java.lang.reflect.Field;
+import java.sql.Ref;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class ReportService {
@@ -34,6 +39,14 @@ public class ReportService {
 
     public List<Report> getReportsByStatus(ReportStatus status) {
         return reportRepository.findByStatus(status).get();
+    }
+
+    public Report updateReportStatus(Long id, ReportStatus newStatus) {
+        return reportRepository.findById(id)
+                .map(report -> {
+                    report.setStatus(newStatus);
+                    return reportRepository.save(report);
+                }).get();
     }
 
     public Report saveReport(Report report) {

@@ -1,6 +1,6 @@
 package com.project.recycle.controller;
 
-import com.project.recycle.model.Supervisor;
+import com.project.recycle.model.*;
 import com.project.recycle.service.SupervisorService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import static org.mockito.Mockito.when;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatusCode;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -43,9 +43,9 @@ class SupervisorControllerTest {
         Supervisor supervisor = new Supervisor(1L, "Valentino", "Giannico",
                 "valen@gmail.com", new Zone(), null);
         when(supervisorService.getSupervisorEmail("valen@gmail.com")).thenReturn(supervisor);
-        HttpStatusCode messageDeleted = supervisorController.deleteSupervisor(1L).getStatusCode();
+        HttpStatus messageDeleted = supervisorController.deleteSupervisor(1L).getStatusCode();
 
-        assertEquals(messageDeleted, HttpStatusCode.valueOf(200));
+        assertEquals(messageDeleted, HttpStatus.valueOf(200));
     }
 
     @Test
