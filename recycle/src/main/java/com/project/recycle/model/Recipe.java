@@ -9,19 +9,20 @@ public class Recipe {
     @GeneratedValue( strategy= GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String classification;
+    @Enumerated
+    private Classification classification;
     @Column(nullable = false)
     private String steps;
 
     public Recipe(){}
 
-    public Recipe(Long id, String classification, String steps) {
+    public Recipe(Long id, Classification classification, String steps) {
         this.id = id;
         this.classification = classification;
         this.steps = steps;
     }
 
-    public Recipe(String classification, String steps) {
+    public Recipe(Classification classification, String steps) {
         this.classification = classification;
         this.steps = steps;
     }
@@ -34,11 +35,11 @@ public class Recipe {
         this.id = id;
     }
 
-    public String getClassification() {
+    public Classification getClassification() {
         return classification;
     }
 
-    public void setClassification(String classification) {
+    public void setClassification(Classification classification) {
         this.classification = classification;
     }
 

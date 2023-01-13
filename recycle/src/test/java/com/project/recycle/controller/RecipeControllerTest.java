@@ -32,7 +32,7 @@ class RecipeControllerTest {
     }
 
     @Test
-    void getRecipesTest(){
+    void getRecipes(){
         Recipe recipe1 = new Recipe("vidrio","1. ASD\n2. ASD");
         Recipe recipe2 = new Recipe("vidrio","1. ASD\n2. ASD");
         Recipe recipe3 = new Recipe("vidrio","1. ASD\n2. ASD");
@@ -51,7 +51,7 @@ class RecipeControllerTest {
     }
 
     @Test
-    void getRecipesByClassificationTest(){
+    void getRecipesByClassification(){
         Recipe recipe1 = new Recipe("vidrio","1. ASD\n2. ASD");
         Recipe recipe2 = new Recipe("latas","1. ASD\n2. ASD");
         Recipe recipe3 = new Recipe("latas","1. ASD\n2. ASD");
@@ -71,11 +71,10 @@ class RecipeControllerTest {
     }
 
     @Test
-    void deleteRecipeTest(){
+    void deleteRecipe(){
         Recipe recipe1 = new Recipe("metal","1. ASD\n2. ASD");
         service.saveRecipe(recipe1);
         when(service.deleteRecipe(recipe1.getId())).thenReturn(true);
 
     }
-
 }
