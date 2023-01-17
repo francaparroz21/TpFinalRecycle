@@ -1,5 +1,6 @@
 package com.project.recycle.service;
 
+import com.project.recycle.controller.RecipeController;
 import com.project.recycle.model.Classification;
 import com.project.recycle.model.Recipe;
 import com.project.recycle.repository.RecipeRepository;
@@ -29,14 +30,18 @@ class RecipeServiceTest {
     RecipeRepository repository;
 
     @Test
-    void saveRecipeTest(){
-        Recipe recipe = new Recipe(Classification.GLASS,"1. 123\n2. 123");
+    void saveRecipe(){
+        Recipe recipe = new Recipe();
+        recipe.setClassification(Classification.GLASS);
+        recipe.setSteps("\"1. 123\\n2. 123\"");
         repository.save(recipe);
         when(repository.save(recipe)).thenReturn(recipe);
+        Recipe r = service.saveRecipe(recipe);
+        assertEquals(recipe,r);
     }
 
     @Test
-    void getRecipesTest(){
+    void getRecipes(){
         Recipe recipe1 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
         Recipe recipe2 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
         Recipe recipe3 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
@@ -52,10 +57,11 @@ class RecipeServiceTest {
 
 
         when(repository.findAll()).thenReturn(listSaved);
+        assertEquals(service.getRecipes(),listSaved);
     }
 
     @Test
-    void getRecipesByClassificationTest(){
+    void getRecipesByClassification(){
         Recipe recipe1 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
         Recipe recipe2 = new Recipe(Classification.BATTERIES,"1. ASD\n2. ASD");
         Recipe recipe3 = new Recipe(Classification.BATTERIES,"1. ASD\n2. ASD");
@@ -72,10 +78,11 @@ class RecipeServiceTest {
         List<Recipe> listSavedReturn = listSaved.stream().filter(recipe -> recipe.getClassification().equals("latas")).collect(Collectors.toList());
 
         when(repository.findByClassification("BATTERIES")).thenReturn(listSavedReturn);
+        assertEquals(service.getRecipesByClassification("BATTERIES"),listSavedReturn);
     }
 
     @Test
-    void deleteRecipeTest(){
+    void deleteRecipe(){
         Recipe recipe1 = new Recipe(Classification.ORGANIC,"1. ASD\n2. ASD");
         repository.save(recipe1);
         when(repository.findById(recipe1.getId())).thenReturn(Optional.of(recipe1));
