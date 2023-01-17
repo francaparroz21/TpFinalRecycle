@@ -26,6 +26,11 @@ public class ZoneController {
         return ResponseEntity.ok(zoneService.deleteZone(id));
     }
 
+    @GetMapping("/coords")
+    public ResponseEntity<List<String>> getAllCoords(){
+        return ResponseEntity.ok(zoneService.getAllCoords());
+    }
+
     @GetMapping
     public ResponseEntity<List<Zone>> getAllZones(){
         return ResponseEntity.ok(zoneService.getAllZones());
