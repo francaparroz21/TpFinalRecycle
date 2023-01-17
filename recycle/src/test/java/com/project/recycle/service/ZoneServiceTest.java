@@ -49,7 +49,17 @@ class ZoneServiceTest {
     }
 
     @Test
-    void getViewAll() {
+    void getAllCoords() {
+        when(zoneRepository.findAll()).thenReturn(
+                List.of(new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(2L,7L)),
+                        new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(1L,3L))));
+        List<String> zones = zoneService.getAllCoords();
+
+        Assertions.assertEquals(List.of("Longitude: "+"7373843 / Latitude: " + "4837483", "Longitude: "+"7373843 / Latitude: " + "4837483"), zones);
+    }
+
+    @Test
+    void getAllZones() {
         when(zoneRepository.findAll()).thenReturn(
                 List.of(new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(2L,7L)),
                         new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(1L,3L))));
