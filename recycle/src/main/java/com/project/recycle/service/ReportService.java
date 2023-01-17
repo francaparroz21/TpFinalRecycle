@@ -41,12 +41,11 @@ public class ReportService {
         return reportRepository.findByStatus(status).get();
     }
 
-    public Report updateReportStatus(Long id, ReportStatus newStatus) {
-        return reportRepository.findById(id)
-                .map(report -> {
-                    report.setStatus(newStatus);
-                    return reportRepository.save(report);
-                }).get();
+    public Report updateReportStatus(Long id, Report report1) {
+        Report report = reportRepository.findById(id).get();
+        report.setStatus(report1.getStatus());
+
+        return reportRepository.save(report);
     }
 
     public Report saveReport(Report report) {

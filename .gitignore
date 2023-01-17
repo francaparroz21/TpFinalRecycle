@@ -1,2 +1,3 @@
 /.idea/
-/recycle.iml/
+**/recycle.iml/
+*/misc.xml
