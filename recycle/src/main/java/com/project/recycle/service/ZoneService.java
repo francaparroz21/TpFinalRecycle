@@ -3,8 +3,11 @@ package com.project.recycle.service;
 import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ZoneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -22,6 +25,14 @@ public class ZoneService {
         return "zone removed";
     }
 
+    public List<String> getAllCoords(){
+        List<Zone> allZones = zoneRepository.findAll();
+        List<String> allCoords = new ArrayList<>();
+        for(Zone element: allZones){
+            allCoords.add("Longitude: "+element.getLongitude()+" / Latitude: "+element.getLatitude());
+        }
+        return allCoords;
+    }
     public List<Zone> getAllZones(){
         return zoneRepository.findAll();
     }

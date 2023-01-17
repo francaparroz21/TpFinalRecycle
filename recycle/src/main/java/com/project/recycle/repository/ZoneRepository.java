@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ZoneRepository extends JpaRepository<Zone, Long> {
+
 }
