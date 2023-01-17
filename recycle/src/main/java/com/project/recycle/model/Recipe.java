@@ -1,5 +1,6 @@
 package com.project.recycle.model;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "recipe")
@@ -8,10 +9,12 @@ public class Recipe {
     @Id
     @GeneratedValue( strategy= GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
+    @Column
+    @NotNull(message = "The classification attribute cannot be null")
     @Enumerated
     private Classification classification;
-    @Column(nullable = false)
+    @Column
+    @NotNull(message = "The steps attribute cannot be null")
     private String steps;
 
     public Recipe(){}

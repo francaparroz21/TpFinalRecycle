@@ -3,6 +3,8 @@ package com.project.recycle.controller;
 import com.project.recycle.model.*;
 import com.project.recycle.service.ZoneService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,27 +17,32 @@ public class ZoneController {
     ZoneService zoneService;
 
     @PostMapping
-    public Zone addZone(@RequestBody Zone zone){
-        return zoneService.addZone(zone);
+    public ResponseEntity<Zone> addZone(@RequestBody Zone zone){
+        return new ResponseEntity<>(zoneService.addZone(zone), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
-    public String deleteZone(@PathVariable("id") Long id){
-        return zoneService.deleteZone(id);
+    public ResponseEntity<String> deleteZone(@PathVariable("id") Long id){
+        return ResponseEntity.ok(zoneService.deleteZone(id));
+    }
+
+    @GetMapping("/coords")
+    public ResponseEntity<List<String>> getAllCoords(){
+        return ResponseEntity.ok(zoneService.getAllCoords());
     }
 
     @GetMapping
-    public List<Zone> getAllZones(){
-        return zoneService.getAllZones();
+    public ResponseEntity<List<Zone>> getAllZones(){
+        return ResponseEntity.ok(zoneService.getAllZones());
     }
 
     @GetMapping("/{id}")
-    public Zone getZoneID(@PathVariable("id") Long id){
-        return  zoneService.getZoneID(id);
+    public ResponseEntity<Zone> getZoneID(@PathVariable("id") Long id){
+        return ResponseEntity.ok(zoneService.getZoneID(id));
     }
 
     @PutMapping("/{id}")
-    public Zone updateZone(@PathVariable("id") Long id, @RequestBody Zone zone){
-        return zoneService.updateZone(id, zone);
+    public ResponseEntity<Zone> updateZone(@PathVariable("id") Long id, @RequestBody Zone zone){
+        return ResponseEntity.ok(zoneService.updateZone(id, zone));
     }
 }
