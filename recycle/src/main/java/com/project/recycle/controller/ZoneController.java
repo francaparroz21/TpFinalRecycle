@@ -31,6 +31,10 @@ public class ZoneController {
         return ResponseEntity.ok(zoneService.getAllCoords());
     }
 
+    @GetMapping("/distance/{zone1}/{zone2}")
+    public String distanceBetweenTwoZone(@PathVariable Long zone1, @PathVariable Long zone2){
+        return zoneService.distanceBetweenTwoZones(zone1, zone2);
+    }
     @GetMapping
     public ResponseEntity<List<Zone>> getAllZones(){
         return ResponseEntity.ok(zoneService.getAllZones());

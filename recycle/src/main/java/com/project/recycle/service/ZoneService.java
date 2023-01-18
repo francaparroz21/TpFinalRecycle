@@ -33,6 +33,25 @@ public class ZoneService {
         }
         return allCoords;
     }
+
+    private static Double toRad(Double value) {
+        return value * Math.PI / 180;
+    }
+
+    public String distanceBetweenTwoZones(Long zone1, Long zone2){
+        Zone zone_1 = zoneRepository.findById(zone1).get();
+        Zone zone_2 = zoneRepository.findById(zone2).get();
+
+
+        final int radius = 6371;
+        Double latDistance = toRad(Double.valueOf(zone_2.getLatitude())-Double.valueOf(zone_1.getLatitude()));
+        Double lonDistance = toRad(Double.valueOf(zone_2.getLongitude())-Double.valueOf(zone_1.getLongitude()));
+        Double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2) +
+                Math.cos(toRad(Double.valueOf(zone_1.getLatitude()))) * Math.cos(toRad(Double.valueOf(zone_2.getLatitude()))) *
+                        Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
+        Double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        return "distance between zona "+zone1+" and zona "+zone2+" of "+radius * c + "km";
+    }
     public List<Zone> getAllZones(){
         return zoneRepository.findAll();
     }
