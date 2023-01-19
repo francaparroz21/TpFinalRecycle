@@ -50,6 +50,14 @@ class ZoneControllerTest {
 
         assertEquals(new_zone, "zone removed");
     }
+    @Test
+    void getAllCoords() {
+        when(zoneService.getAllCoords()).thenReturn(
+                List.of("Longitude: "+"33283982 / Latitude: " + "56454984", "Longitude: "+"7373843 / Latitude: " + "4837483"));
+        List<String> zones = zoneController.getAllCoords().getBody();
+
+        Assertions.assertEquals( List.of("Longitude: "+"33283982 / Latitude: " + "56454984", "Longitude: "+"7373843 / Latitude: " + "4837483"), zones);
+    }
 
     @Test
     void getViewAll() {
