@@ -45,8 +45,9 @@ public class ZoneController {
         return ResponseEntity.ok(zoneService.getZoneID(id));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Zone> updateZone(@PathVariable("id") Long id, @RequestBody Zone zone){
-        return ResponseEntity.ok(zoneService.updateZone(id, zone));
+    @PutMapping("/{id}/{idSupervisor}")
+    public ResponseEntity<Object> updateZone(@PathVariable("id") Long id,
+                                             @PathVariable("idSupervisor") Long supervisorId, @RequestBody Zone zone){
+        return ResponseEntity.ok(zoneService.updateZone(id, zone, supervisorId));
     }
 }
