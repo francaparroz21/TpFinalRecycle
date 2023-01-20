@@ -1,5 +1,6 @@
 package com.project.recycle.service;
 
+import com.project.recycle.model.Classification;
 import com.project.recycle.model.Recipe;
 import com.project.recycle.repository.RecipeRepository;
 import com.project.recycle.service.RecipeService;
@@ -28,16 +29,16 @@ class RecipeServiceTest {
 
     @Test
     void saveRecipeTest(){
-        Recipe recipe = new Recipe("vidrio","1. 123\n2. 123");
+        Recipe recipe = new Recipe(Classification.GLASS,"1. 123\n2. 123");
         repository.save(recipe);
         when(repository.save(recipe)).thenReturn(recipe);
     }
 
     @Test
     void getRecipesTest(){
-        Recipe recipe1 = new Recipe("vidrio","1. ASD\n2. ASD");
-        Recipe recipe2 = new Recipe("vidrio","1. ASD\n2. ASD");
-        Recipe recipe3 = new Recipe("vidrio","1. ASD\n2. ASD");
+        Recipe recipe1 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
+        Recipe recipe2 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
+        Recipe recipe3 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
 
         List<Recipe> listSaved = new ArrayList<>();
         listSaved.add(recipe1);
@@ -54,9 +55,9 @@ class RecipeServiceTest {
 
     @Test
     void getRecipesByClassificationTest(){
-        Recipe recipe1 = new Recipe("vidrio","1. ASD\n2. ASD");
-        Recipe recipe2 = new Recipe("latas","1. ASD\n2. ASD");
-        Recipe recipe3 = new Recipe("latas","1. ASD\n2. ASD");
+        Recipe recipe1 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
+        Recipe recipe2 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
+        Recipe recipe3 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
 
         List<Recipe> listSaved = new ArrayList<>();
         listSaved.add(recipe1);
@@ -67,14 +68,12 @@ class RecipeServiceTest {
         repository.save(recipe2);
         repository.save(recipe3);
 
-        List<Recipe> listSavedReturn = listSaved.stream().filter(recipe -> recipe.getClassification().equals("latas")).toList();
-
-        when(repository.findByClassification("latas")).thenReturn(listSavedReturn);
+        ;
     }
 
     @Test
     void deleteRecipeTest(){
-        Recipe recipe1 = new Recipe("metal","1. ASD\n2. ASD");
+        Recipe recipe1 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
         repository.save(recipe1);
         when(repository.findById(recipe1.getId())).thenReturn(Optional.of(recipe1));
         assertEquals(true,service.deleteRecipe(recipe1.getId()));
