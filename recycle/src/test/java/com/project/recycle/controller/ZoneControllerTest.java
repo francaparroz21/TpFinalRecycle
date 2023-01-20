@@ -33,7 +33,7 @@ class ZoneControllerTest {
 
     @Test
     void addZone() {
-        Zone zone = new Zone("23123124", "42434324", Classification.GLASS, 89, List.of(1L,3L));
+        Zone zone = new Zone("23123124", "42434324", Classification.GLASS, List.of(1L,3L));
         when(zoneService.addZone(zone)).thenReturn(zone);
 
         ResponseEntity<Zone> new_zone = zoneController.addZone(zone);
@@ -43,7 +43,7 @@ class ZoneControllerTest {
 
     @Test
     void deleteZone() {
-        Zone zone = new Zone("23123124", "42434324", Classification.GLASS, 89, List.of(1L,3L));
+        Zone zone = new Zone("23123124", "42434324", Classification.GLASS, List.of(1L,3L));
         when(zoneService.deleteZone(zone.getZoneID())).thenReturn("zone removed");
 
         String new_zone = zoneService.deleteZone(zone.getZoneID());
@@ -62,8 +62,8 @@ class ZoneControllerTest {
     @Test
     void getViewAll() {
         when(zoneService.getAllZones()).thenReturn(
-                List.of(new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(2L,7L)),
-                        new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(1L,3L))));
+                List.of(new Zone("7373843", "4837483", Classification.GLASS, List.of(2L,7L)),
+                        new Zone("7373843", "4837483", Classification.GLASS, List.of(1L,3L))));
         ResponseEntity<List<Zone>> zones = zoneController.getAllZones();
 
         Assertions.assertNotNull(zones);
@@ -72,7 +72,7 @@ class ZoneControllerTest {
 
     @Test
     void getZoneID() {
-        Zone new_zone = new Zone(1L,"7373843", "4837483", Classification.GLASS, 56, List.of(2L,7L));
+        Zone new_zone = new Zone(1L,"7373843", "4837483", Classification.GLASS, List.of(2L,7L));
         when(zoneService.getZoneID(1L)).thenReturn(new_zone);
         ResponseEntity<Zone> zone = zoneController.getZoneID(1L);
 
