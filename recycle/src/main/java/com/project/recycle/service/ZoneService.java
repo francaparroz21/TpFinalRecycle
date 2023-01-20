@@ -2,14 +2,13 @@ package com.project.recycle.service;
 
 import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ZoneRepository;
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class ZoneService {
@@ -77,8 +76,8 @@ public class ZoneService {
             if(zone.getZoneStatus() != null){
                 zoneSearch.setZoneStatus(zone.getZoneStatus());
             }
-            if(zone.getUsedCapacityPercentage() != 0){
-                if(zone.getUsedCapacityPercentage() == 100){
+            if(zone.getUsedCapacityPercentage() >= 0){
+                if(zone.getUsedCapacityPercentage() == 100 && zoneSearch.getUsedCapacityPercentage() != 100){
                     zoneSearch.setFullFillDate(new Date());
                 }
                 zoneSearch.setUsedCapacityPercentage(zone.getUsedCapacityPercentage());
@@ -91,4 +90,30 @@ public class ZoneService {
 
         return "Error: La zona no contiene ese supervisor ";
     }
+
+    public List<String> zonesComplete() {
+        List<Zone> listZones = zoneRepository.findAll();
+        List<Zone> listCompleted = new ArrayList<>();
+        for(Zone el: listZones){
+            if (el.getUsedCapacityPercentage()==100){
+                listCompleted.add(el);
+            }
+        }
+
+        Map<Integer,Zone> mapOrdered = new HashMap<>();
+        List<String> listOrdered = new ArrayList<>();
+
+        for (int i = 0; i<listCompleted.size();i++){
+
+            int elapsedTime = (int) (listCompleted.get(i).getFullFillDate().getTime()
+                    - listCompleted.get(i).getStartDate().getTime())/(1000*60);
+
+            mapOrdered.put(elapsedTime,zoneRepository.findById(listCompleted.get(i).getZoneID()).get());
+        }
+        for(Map.Entry<Integer,Zone> el: mapOrdered.entrySet()){
+            listOrdered.add("La zona "+ el.getValue().getZoneID()+" se lleno en "+ el.getKey()+" minutos.");
+        }
+        return listOrdered;
+    }
+
 }
