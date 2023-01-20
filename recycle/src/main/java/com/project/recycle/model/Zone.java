@@ -3,6 +3,8 @@ package com.project.recycle.model;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
+import net.bytebuddy.implementation.bind.annotation.Default;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.persistence.*;
@@ -11,6 +13,8 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -37,28 +41,20 @@ public class Zone {
     private Classification classification;
 
     @Column (name = "status")
-    @NotNull (message = "The status attribute cannot be null")
-    @Enumerated
-    private  ZoneStatus zoneStatus;
+    @Enumerated(EnumType.STRING)
+    private ZoneStatus zoneStatus = ZoneStatus.OK;
 
     @Column
-    @NotNull (message = "The reclassification attribute cannot be null")
-    private boolean reclassification;
+    private boolean reclassification = false;
 
     @Column
-    @NotNull (message = "The startDate attribute cannot be null")
-    private LocalDate startDate;
+    private Date startDate = new Date();
 
     @Column
-    @NotNull (message = "The fullFillDate attribute cannot be null")
-    private LocalDate fullFillDate;
-
+    private Date fullFillDate = null;
 
     @Column
-    @NotNull(message = "The usedCapacityPercentage attribute cannot be null")
-    @Min(value = 1, message = "Minium capacity is 1%")
-    @Max(value = 100, message = "Maximum capacity is 100%")
-    private int usedCapacityPercentage;
+    private int usedCapacityPercentage = 0;
 
     @Column(name = "supervisors")
     @ElementCollection(targetClass= Long.class)
@@ -72,13 +68,7 @@ public class Zone {
         this.longitude = longitude;
         this.latitude = latitude;
         this.classification = classification;
-        this.reclassification = false;
-        this.startDate = LocalDate.now();
-        this.fullFillDate = null;
-        this.zoneStatus = ZoneStatus.OK;
-        this.usedCapacityPercentage = 0;
         this.supervisorsID = supervisorsID;
-
     }
 
     public Zone(Long zoneID, String longitude, String latitude, Classification classification, List<Long> supervisorsID) {
@@ -86,11 +76,6 @@ public class Zone {
         this.longitude = longitude;
         this.latitude = latitude;
         this.classification = classification;
-        this.reclassification = false;
-        this.startDate = LocalDate.now();
-        this.fullFillDate = null;
-        this.zoneStatus = ZoneStatus.OK;
-        this.usedCapacityPercentage = 0;
         this.supervisorsID = supervisorsID;
     }
 
@@ -144,23 +129,26 @@ public class Zone {
         this.reclassification = reclassification;
     }
 
-    public LocalDate getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDate getFullFillDate() {
+    public Date getFullFillDate() {
         return fullFillDate;
     }
 
-    public void setFullFillDate(LocalDate fullFillDate) {
+    public void setFullFillDate(Date fullFillDate) {
         this.fullFillDate = fullFillDate;
     }
 
     public int getUsedCapacityPercentage() {
+        if(usedCapacityPercentage == 100){
+
+        }
         return usedCapacityPercentage;
     }
 
