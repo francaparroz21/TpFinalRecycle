@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -60,14 +61,34 @@ public class ZoneService {
         return zoneRepository.findById(id).get();
     }
 
-    public Zone updateZone(Long id, Zone zone){
+    public Object updateZone(Long id, Zone zone, Long supervisorId){
         Zone zoneSearch = zoneRepository.findById(id).get();
-        if(zone.getClassification() != null){
-            zoneSearch.setClassification(zone.getClassification());
+
+        if(zoneSearch.getSupervisorsID().contains(supervisorId)){
+            if(zone.getLatitude() != null){
+                zoneSearch.setLatitude(zone.getLatitude());
+            }
+            if(zone.getLongitude() != null){
+                zoneSearch.setLongitude(zone.getLongitude());
+            }
+            if(zone.getClassification() != null){
+                zoneSearch.setClassification(zone.getClassification());
+            }
+            if(zone.getZoneStatus() != null){
+                zoneSearch.setZoneStatus(zone.getZoneStatus());
+            }
+            if(zone.getUsedCapacityPercentage() != 0){
+                if(zone.getUsedCapacityPercentage() == 100){
+                    zoneSearch.setFullFillDate(new Date());
+                }
+                zoneSearch.setUsedCapacityPercentage(zone.getUsedCapacityPercentage());
+            }
+            if(zone.getReports() != null){
+                zoneSearch.setReports(zone.getReports());
+            }
+            return zoneRepository.save(zoneSearch);
         }
-        if(zone.getUsedCapacityPercentage() != 0){
-            zoneSearch.setUsedCapacityPercentage(zone.getUsedCapacityPercentage());
-        }
-        return zoneRepository.save(zoneSearch);
+
+        return "Error: La zona no contiene ese supervisor ";
     }
 }
