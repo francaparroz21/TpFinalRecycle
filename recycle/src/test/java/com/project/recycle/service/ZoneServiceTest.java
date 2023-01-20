@@ -31,7 +31,7 @@ class ZoneServiceTest {
 
     @Test
     void addZone() {
-        Zone zone = new Zone("23123124", "42434324", Classification.GLASS, 89, List.of(1L,3L));
+        Zone zone = new Zone("23123124", "42434324", Classification.GLASS, List.of(1L,3L));
         when(zoneRepository.save(zone)).thenReturn(zone);
 
         Zone new_zone = zoneService.addZone(zone);
@@ -41,7 +41,7 @@ class ZoneServiceTest {
 
     @Test
     void deleteZone(){
-        Zone expected = new Zone(1L,"23123124", "42434324", Classification.GLASS, 89, List.of(1L,3L));
+        Zone expected = new Zone(1L,"23123124", "42434324", Classification.GLASS, List.of(1L,3L));
         when(zoneRepository.findById(1L)).thenReturn(Optional.of(expected)).thenReturn(null);
         String zone_deleted = zoneService.deleteZone(1L);
         Mockito.verify(zoneRepository, Mockito.times(1)).deleteById(1L);
@@ -51,8 +51,8 @@ class ZoneServiceTest {
     @Test
     void getAllCoords() {
         when(zoneRepository.findAll()).thenReturn(
-                List.of(new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(2L,7L)),
-                        new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(1L,3L))));
+                List.of(new Zone("7373843", "4837483", Classification.GLASS, List.of(2L,7L)),
+                        new Zone("7373843", "4837483", Classification.GLASS, List.of(1L,3L))));
         List<String> zones = zoneService.getAllCoords();
 
         Assertions.assertEquals(List.of("Longitude: "+"7373843 / Latitude: " + "4837483", "Longitude: "+"7373843 / Latitude: " + "4837483"), zones);
@@ -61,8 +61,8 @@ class ZoneServiceTest {
     @Test
     void getAllZones() {
         when(zoneRepository.findAll()).thenReturn(
-                List.of(new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(2L,7L)),
-                        new Zone("7373843", "4837483", Classification.GLASS, 56, List.of(1L,3L))));
+                List.of(new Zone("7373843", "4837483", Classification.GLASS, List.of(2L,7L)),
+                        new Zone("7373843", "4837483", Classification.GLASS, List.of(1L,3L))));
         List<Zone> zones = zoneService.getAllZones();
 
         Assertions.assertNotNull(zones);
@@ -71,7 +71,7 @@ class ZoneServiceTest {
 
     @Test
     void getZoneID() {
-        Zone new_zone = new Zone(1L,"7373843", "4837483", Classification.GLASS, 56, List.of(2L,7L));
+        Zone new_zone = new Zone(1L,"7373843", "4837483", Classification.GLASS, List.of(2L,7L));
         when(zoneRepository.findById(1L)).thenReturn(Optional.of(new_zone));
         Zone zone = zoneService.getZoneID(1L);
 
