@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/zone")
@@ -50,4 +51,10 @@ public class ZoneController {
                                              @PathVariable("idSupervisor") Long supervisorId, @RequestBody Zone zone){
         return ResponseEntity.ok(zoneService.updateZone(id, zone, supervisorId));
     }
+
+    @GetMapping("/completed")
+    public ResponseEntity<List<String>> zonesComplete(){
+        return ResponseEntity.ok(zoneService.zonesComplete());
+    }
+
 }
