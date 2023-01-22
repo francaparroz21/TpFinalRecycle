@@ -1,6 +1,7 @@
 package com.project.recycle.service;
 
 import com.project.recycle.model.Classification;
+import com.project.recycle.model.Supervisor;
 import com.project.recycle.model.Zone;
 import com.project.recycle.repository.ZoneRepository;
 import org.junit.jupiter.api.Assertions;
@@ -16,6 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 

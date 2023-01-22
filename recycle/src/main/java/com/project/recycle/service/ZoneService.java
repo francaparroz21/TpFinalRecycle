@@ -111,7 +111,7 @@ public class ZoneService {
             mapOrdered.put(elapsedTime,zoneRepository.findById(listCompleted.get(i).getZoneID()).get());
         }
         for(Map.Entry<Integer,Zone> el: mapOrdered.entrySet()){
-            listOrdered.add("La zona "+ el.getValue().getZoneID()+" se lleno en "+ el.getKey()+" minutos.");
+            listOrdered.add("The zone "+ el.getValue().getZoneID()+" was filled in "+ el.getKey()+" minutes.");
         }
         return listOrdered;
     }

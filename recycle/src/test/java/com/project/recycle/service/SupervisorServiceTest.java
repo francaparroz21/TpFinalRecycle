@@ -25,7 +25,7 @@ class SupervisorServiceTest {
     SupervisorService supervisorService;
     @Test
     void add_supervisor(){
-        Zone zone = new Zone(1L,"545454", "w3343434", Classification.GLASS, 76, null);
+        Zone zone = new Zone(1L,"545454", "w3343434", Classification.GLASS, null);
         Supervisor supervisor = new Supervisor("Valentino", "Giannico",
                 "valen@gmail.com", zone, null);
         when(supervisorRepository.save(supervisor)).thenReturn(supervisor);
