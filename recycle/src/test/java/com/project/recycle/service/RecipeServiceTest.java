@@ -1,15 +1,12 @@
 package com.project.recycle.service;
 
-import com.project.recycle.controller.RecipeController;
 import com.project.recycle.model.Classification;
 import com.project.recycle.model.Recipe;
 import com.project.recycle.repository.RecipeRepository;
-import com.project.recycle.service.RecipeService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import static org.mockito.Mockito.when;

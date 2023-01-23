@@ -4,6 +4,9 @@ import com.project.recycle.model.Report;
 import com.project.recycle.model.ReportStatus;
 import com.project.recycle.repository.ReportRepository;
 import com.project.recycle.service.ReportService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +28,7 @@ public class ReportController {
     }
 
     @GetMapping
+    @ApiOperation(value = "get all reports", authorizations = {@Authorization(value = "JWT")})
     ResponseEntity<List<Report>> getAllReports() {
         try {
             return new ResponseEntity<>(reportService.getAllReports(), HttpStatus.OK);
@@ -33,6 +37,7 @@ public class ReportController {
         }
     }
 
+    @ApiOperation(value = "get reports by status", authorizations = {@Authorization(value = "JWT")})
     @GetMapping("/{status}")
     ResponseEntity<List<Report>> getByStatus(@PathVariable ReportStatus status) {
         try {
@@ -43,6 +48,7 @@ public class ReportController {
     }
 
     @GetMapping("/pages")
+    @ApiOperation(value = "get reports by pages", authorizations = {@Authorization(value = "JWT")})
     ResponseEntity<List<Report>> getByPages(@RequestParam int page, @RequestParam int size) {
         try {
             return new ResponseEntity<>(reportService.getReportsByPages(page, size), HttpStatus.OK);
@@ -52,6 +58,7 @@ public class ReportController {
     }
 
     @PostMapping
+    @ApiOperation(value = "post a report", authorizations = {@Authorization(value = "JWT")})
     ResponseEntity<Report> newReport(@RequestBody Report newReport) {
         try {
             return new ResponseEntity<>(reportService.saveReport(newReport), HttpStatus.CREATED);
@@ -61,11 +68,13 @@ public class ReportController {
     }
 
     @PutMapping("/{id}")
+    @ApiOperation(value = "update a report", authorizations = {@Authorization(value = "JWT")})
     ResponseEntity<Report> updateStatus(@PathVariable Long id, @RequestBody Report report) {
         return new ResponseEntity<>(reportService.updateReportStatus(id, report), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
+    @ApiOperation(value = "delete a report by id", authorizations = {@Authorization(value = "JWT")})
     ResponseEntity deleteReport(@PathVariable Long id){
         reportService.deleteReport(id);
         return new ResponseEntity(this.reportService.deleteReport(id) ?
