@@ -14,6 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -30,6 +31,8 @@ class RecipeControllerTest {
     void saveRecipe() {
         Recipe recipe = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
         when(service.saveRecipe(recipe)).thenReturn(recipe);
+        Recipe r = controller.saveRecipe(recipe).getBody();
+        assertEquals(recipe, r);
     }
 
     @Test
@@ -46,16 +49,15 @@ class RecipeControllerTest {
         service.saveRecipe(recipe1);
         service.saveRecipe(recipe2);
         service.saveRecipe(recipe3);
-
-
         when(service.getRecipes()).thenReturn(listSaved);
+        assertEquals(controller.getRecipes().getBody(), listSaved);
     }
 
     @Test
     void getRecipesByClassification(){
         Recipe recipe1 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
-        Recipe recipe2 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
-        Recipe recipe3 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
+        Recipe recipe2 = new Recipe(Classification.BATTERIES,"1. ASD\n2. ASD");
+        Recipe recipe3 = new Recipe(Classification.BATTERIES,"1. ASD\n2. ASD");
 
         List<Recipe> listSaved = new ArrayList<>();
         listSaved.add(recipe1);
@@ -66,15 +68,17 @@ class RecipeControllerTest {
         service.saveRecipe(recipe2);
         service.saveRecipe(recipe3);
 
+        List<Recipe> listSavedReturn = listSaved.stream().filter(recipe -> recipe.getClassification().equals("BATTERIES")).collect(Collectors.toList());
 
-
+        when(service.getRecipesByClassification("BATTERIES")).thenReturn(listSavedReturn);
+        assertEquals(controller.getRecipesByClassification("BATTERIES").getBody(), listSavedReturn);
     }
 
     @Test
     void deleteRecipe(){
-        Recipe recipe1 = new Recipe(Classification.GLASS,"1. ASD\n2. ASD");
+        Recipe recipe1 = new Recipe(Classification.ORGANIC,"1. ASD\n2. ASD");
         service.saveRecipe(recipe1);
         when(service.deleteRecipe(recipe1.getId())).thenReturn(true);
-
+        assertEquals(true,controller.deleteRecipe(recipe1.getId()).getBody());
     }
 }

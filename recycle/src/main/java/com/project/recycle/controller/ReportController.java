@@ -68,8 +68,9 @@ public class ReportController {
     }
 
     @PutMapping("/{id}")
-    ResponseEntity<Report> updateStatus(@PathVariable Long id, @RequestBody ReportStatus newStatus) {
-        return new ResponseEntity<>(reportService.updateReportStatus(id, newStatus), HttpStatus.OK);
+    @ApiOperation(value = "update a report", authorizations = {@Authorization(value = "JWT")})
+    ResponseEntity<Report> updateStatus(@PathVariable Long id, @RequestBody Report report) {
+        return new ResponseEntity<>(reportService.updateReportStatus(id, report), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

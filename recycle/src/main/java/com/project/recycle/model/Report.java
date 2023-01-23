@@ -3,6 +3,7 @@ package com.project.recycle.model;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
@@ -14,19 +15,24 @@ public class Report {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long reportId;
-    @Column(nullable = false)
+    @Column
+    @NotNull(message = "The date attribute cannot be null")
     private LocalDate date;
-    @Column(length = 300, nullable = false)
+    @Column(length = 300)
+    @NotNull(message = "The reportMessage attribute cannot be null")
     private String reportMessage;
 
     @Enumerated(EnumType.ORDINAL)
+    @NotNull(message = "The status attribute cannot be null")
     private ReportStatus status;
 
     @ManyToOne
     @JoinColumn(name = "zoneId")
+    @NotNull(message = "The zone attribute cannot be null")
     private Zone zone;
 
-    @Column(length = 50, nullable = false)
+    @Column(length = 50)
+    @NotNull(message = "The complainant attribute cannot be null")
     private String complainant;
 
     public Report() {

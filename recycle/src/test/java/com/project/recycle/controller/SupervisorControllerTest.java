@@ -44,6 +44,7 @@ class SupervisorControllerTest {
                 "valen@gmail.com", new Zone(), null);
         when(supervisorService.getSupervisorEmail("valen@gmail.com")).thenReturn(supervisor);
         HttpStatus messageDeleted = supervisorController.deleteSupervisor(1L).getStatusCode();
+        HttpStatus messageDeleted2 = supervisorController.deleteSupervisor(2L).getStatusCode();
 
         assertEquals(messageDeleted, HttpStatus.valueOf(200));
     }
